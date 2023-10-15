@@ -10,17 +10,11 @@ export const menus = {
     ],
   },
   openai: {
-    label: "openai",
+    label: "chatgpt",
     subMenus: [
       {
-        label: "sub",
-        href: "/docs/sub",
-        subMenus: [
-          {
-            label: "nodejs",
-            href: "/docs/sub/nodejs",
-          },
-        ],
+        label: "介绍",
+        href: "/docs/chatgpt/introduction",
       },
     ],
   },

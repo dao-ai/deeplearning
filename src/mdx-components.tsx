@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
+import Player from "./components/Player.";
 
 // 该文件允许您提供在MDX文件中使用的自定义React组件。
 // 你可以导入和使用任何你想要的React组件，包括来自其他库的组件。
@@ -12,6 +13,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     img: (props: any) => (
       <Image sizes="100vw" width={100} height={100} style={{ width: "100%", height: "auto" }} {...props} />
     ),
+    Player: ({ title }) => <Player title={title} />,
     ...components,
   };
 }
