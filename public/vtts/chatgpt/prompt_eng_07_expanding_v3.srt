@@ -1,0 +1,696 @@
+1
+00:00:05,200 --> 00:00:08,300
+expanding is the task of taking a shorter piece of text
+
+2
+00:00:08,400 --> 00:00:11,266
+such as a set of instructions or a list of topics
+
+3
+00:00:11,266 --> 00:00:13,133
+and having the larger language model
+
+4
+00:00:13,200 --> 00:00:15,566
+generate a longer piece of text such as
+
+5
+00:00:15,566 --> 00:00:18,200
+an email or an essay about some topic
+
+6
+00:00:18,533 --> 00:00:20,133
+there are some great uses of this
+
+7
+00:00:20,133 --> 00:00:22,166
+such as if you use a large language model
+
+8
+00:00:22,200 --> 00:00:24,000
+as a brainstorming partner
+
+9
+00:00:24,166 --> 00:00:24,533
+but
+
+10
+00:00:24,533 --> 00:00:26,600
+I just also want to acknowledge that there are some
+
+11
+00:00:26,600 --> 00:00:28,566
+problematic use cases of this
+
+12
+00:00:28,700 --> 00:00:30,933
+such as if someone were to use it they generate
+
+13
+00:00:30,933 --> 00:00:32,533
+a large amount of spam
+
+14
+00:00:32,866 --> 00:00:35,266
+so when you use these capabilities of a large
+
+15
+00:00:35,266 --> 00:00:36,166
+language model
+
+16
+00:00:36,300 --> 00:00:36,900
+please
+
+17
+00:00:36,900 --> 00:00:40,000
+use it only in a responsible way and in a way that
+
+18
+00:00:40,000 --> 00:00:41,100
+helps people
+
+19
+00:00:41,766 --> 00:00:43,500
+in this video we'll go through
+
+20
+00:00:43,533 --> 00:00:46,566
+an example of how you can use a language model to
+
+21
+00:00:46,600 --> 00:00:47,766
+generate a personalized
+
+22
+00:00:47,766 --> 00:00:49,733
+email based on some information
+
+23
+00:00:50,200 --> 00:00:51,533
+the email is kind of
+
+24
+00:00:51,533 --> 00:00:53,300
+self proclaimed to be from an AI bot
+
+25
+00:00:53,300 --> 00:00:55,866
+which as you mentioned is very important
+
+26
+00:00:56,366 --> 00:00:57,733
+we're also going to use
+
+27
+00:00:57,966 --> 00:01:00,266
+another one of the models input parameters
+
+28
+00:01:00,266 --> 00:01:01,300
+called temperature
+
+29
+00:01:01,300 --> 00:01:02,966
+and this kind of allows you to
+
+30
+00:01:03,066 --> 00:01:04,866
+vary the kind of degree of
+
+31
+00:01:04,933 --> 00:01:06,900
+exploration and variety
+
+32
+00:01:06,900 --> 00:01:08,900
+in the kind of models responses
+
+33
+00:01:08,900 --> 00:01:10,600
+so let's get into it
+
+34
+00:01:11,400 --> 00:01:13,866
+so before we get started we're going to
+
+35
+00:01:13,933 --> 00:01:15,333
+kind of do the usual setup
+
+36
+00:01:15,333 --> 00:01:16,500
+so set up
+
+37
+00:01:16,500 --> 00:01:17,900
+the Openai Python package
+
+38
+00:01:17,900 --> 00:01:19,733
+and then also define our help of function
+
+39
+00:01:19,733 --> 00:01:20,733
+get completion
+
+40
+00:01:22,333 --> 00:01:23,800
+and now we're going to write a custom
+
+41
+00:01:23,800 --> 00:01:24,733
+email response to a
+
+42
+00:01:24,733 --> 00:01:25,766
+customer review
+
+43
+00:01:25,966 --> 00:01:29,466
+and so given a customer review and the sentiment
+
+44
+00:01:29,466 --> 00:01:32,000
+we're going to generate a custom response
+
+45
+00:01:32,500 --> 00:01:35,866
+now we're going to use the language model to
+
+46
+00:01:36,100 --> 00:01:38,933
+generate a custom email to a customer
+
+47
+00:01:39,200 --> 00:01:41,866
+based on a customer review and the sentiment
+
+48
+00:01:41,866 --> 00:01:42,900
+of the review
+
+49
+00:01:43,133 --> 00:01:45,366
+so we've already extracted the sentiment
+
+50
+00:01:45,700 --> 00:01:47,533
+using the kind of
+
+51
+00:01:47,866 --> 00:01:50,300
+prompts that we saw in the inferring video
+
+52
+00:01:51,133 --> 00:01:54,133
+and then this is the customer view for a blender
+
+53
+00:01:55,933 --> 00:01:58,133
+and now we're going to customize the
+
+54
+00:01:58,200 --> 00:01:59,966
+reply based on the sentiment
+
+55
+00:02:01,333 --> 00:02:03,200
+and so here the instruction is
+
+56
+00:02:03,200 --> 00:02:05,066
+you are a customer service
+
+57
+00:02:05,300 --> 00:02:07,400
+AI assistant your task is to send an
+
+58
+00:02:07,400 --> 00:02:09,266
+email reply to a valued customer
+
+59
+00:02:09,366 --> 00:02:12,666
+given the customer email delimited by 3 baptics
+
+60
+00:02:12,666 --> 00:02:13,800
+generate are applied to thank the
+
+61
+00:02:13,800 --> 00:02:14,933
+customer for their review
+
+62
+00:02:14,966 --> 00:02:16,800
+if the sentiment is positive or neutral
+
+63
+00:02:16,800 --> 00:02:18,400
+thank them for their review
+
+64
+00:02:18,600 --> 00:02:19,966
+if the sentiment is negative
+
+65
+00:02:19,966 --> 00:02:22,000
+apologize and suggest that they can reach out to
+
+66
+00:02:22,000 --> 00:02:23,100
+customer service
+
+67
+00:02:23,466 --> 00:02:25,766
+make sure to use specific details from the review
+
+68
+00:02:25,966 --> 00:02:27,800
+write in a concise and professional tone
+
+69
+00:02:27,800 --> 00:02:30,300
+and sign the email as AI customer agent
+
+70
+00:02:30,333 --> 00:02:31,700
+and when you're using
+
+71
+00:02:32,000 --> 00:02:32,966
+a language model to
+
+72
+00:02:32,966 --> 00:02:35,400
+generate text that you're going to show to a user
+
+73
+00:02:35,566 --> 00:02:36,533
+it's very important
+
+74
+00:02:37,100 --> 00:02:38,800
+to have this kind of transparency
+
+75
+00:02:38,800 --> 00:02:41,000
+and let the user know that the text they're seeing was
+
+76
+00:02:41,000 --> 00:02:42,500
+generated by AI
+
+77
+00:02:44,100 --> 00:02:46,133
+and then we'll just input the customer review
+
+78
+00:02:46,133 --> 00:02:47,400
+and the review sentiment
+
+79
+00:02:47,400 --> 00:02:50,866
+and also note that this pop isn't necessarily important
+
+80
+00:02:50,866 --> 00:02:51,333
+because
+
+81
+00:02:51,333 --> 00:02:53,900
+we could actually use this prompt to also extract
+
+82
+00:02:53,900 --> 00:02:55,966
+the review sentiment and then in a follow up step
+
+83
+00:02:55,966 --> 00:02:56,866
+write the email
+
+84
+00:02:57,100 --> 00:02:58,766
+but just for the sake of the example
+
+85
+00:02:58,800 --> 00:02:59,100
+well
+
+86
+00:02:59,100 --> 00:03:01,400
+we've already extracted the sentiment from the review
+
+87
+00:03:02,466 --> 00:03:06,133
+and so here we have a response to the customer
+
+88
+00:03:06,133 --> 00:03:08,366
+it addresses details that
+
+89
+00:03:08,400 --> 00:03:10,500
+the customer mentioned in their review
+
+90
+00:03:11,066 --> 00:03:13,100
+and as we instructed
+
+91
+00:03:13,300 --> 00:03:15,366
+suggest that they reach out to customer service
+
+92
+00:03:15,366 --> 00:03:18,400
+because this is just an AI customer service agent
+
+93
+00:03:21,000 --> 00:03:22,533
+next we're going to use
+
+94
+00:03:22,966 --> 00:03:26,666
+a parameter of the language model called temperature
+
+95
+00:03:26,700 --> 00:03:28,466
+that will allow us to
+
+96
+00:03:29,733 --> 00:03:32,733
+change the kind of variety of the models responses
+
+97
+00:03:32,733 --> 00:03:35,133
+so you can kind of think of temperature as
+
+98
+00:03:35,166 --> 00:03:36,200
+the degree
+
+99
+00:03:36,200 --> 00:03:39,466
+of expiration or kind of randomness of the model
+
+100
+00:03:39,700 --> 00:03:43,666
+and so for this particular phrase my favorite food is
+
+101
+00:03:43,900 --> 00:03:45,100
+the kind of most
+
+102
+00:03:45,133 --> 00:03:48,066
+likely next word that the model predicts is pizza
+
+103
+00:03:48,066 --> 00:03:50,200
+and the kind of next to most likely it
+
+104
+00:03:50,200 --> 00:03:52,166
+suggests are sushi and tacos
+
+105
+00:03:52,166 --> 00:03:53,800
+and so at a temperature of 0
+
+106
+00:03:53,933 --> 00:03:56,333
+the model will always choose the most likely next word
+
+107
+00:03:56,333 --> 00:03:57,700
+which in this case is pizza
+
+108
+00:03:57,700 --> 00:03:59,133
+and at a higher temperature
+
+109
+00:03:59,166 --> 00:04:01,866
+it will also choose one of the less likely words
+
+110
+00:04:01,866 --> 00:04:04,133
+and at an even higher temperature
+
+111
+00:04:04,133 --> 00:04:05,500
+it might even choose tacos
+
+112
+00:04:05,500 --> 00:04:07,866
+which only kind of has a 5 percent chance
+
+113
+00:04:08,066 --> 00:04:09,733
+of being chosen
+
+114
+00:04:10,600 --> 00:04:12,133
+and you can imagine that kind of
+
+115
+00:04:12,400 --> 00:04:14,133
+as the model continues
+
+116
+00:04:14,266 --> 00:04:17,300
+this final response so my favorite food is pizza
+
+117
+00:04:17,300 --> 00:04:19,533
+and it kind of continues to generate more words
+
+118
+00:04:19,533 --> 00:04:21,733
+this response will kind of diverge from
+
+119
+00:04:21,766 --> 00:04:25,366
+the first response which is my favorite food is tacos
+
+120
+00:04:25,366 --> 00:04:27,266
+and so as the kind of model continues
+
+121
+00:04:27,266 --> 00:04:29,600
+these two responses will become more and more different
+
+122
+00:04:30,666 --> 00:04:34,000
+in general when building applications where you want a
+
+123
+00:04:34,000 --> 00:04:34,866
+predictable
+
+124
+00:04:35,133 --> 00:04:37,933
+response I would recommend using temperature 0
+
+125
+00:04:38,100 --> 00:04:40,066
+throughout all of these videos we've
+
+126
+00:04:40,333 --> 00:04:41,533
+been using temperature 0
+
+127
+00:04:41,533 --> 00:04:42,466
+and I think that
+
+128
+00:04:42,466 --> 00:04:44,466
+if you're trying to build a system that is
+
+129
+00:04:44,533 --> 00:04:47,300
+reliable and predictable you should go with this
+
+130
+00:04:47,466 --> 00:04:48,533
+if you're trying to
+
+131
+00:04:48,600 --> 00:04:49,466
+use the model
+
+132
+00:04:49,500 --> 00:04:51,700
+in a more creative way where you might want
+
+133
+00:04:51,900 --> 00:04:54,466
+a kind of wider variety of different outputs
+
+134
+00:04:54,466 --> 00:04:56,733
+you might want to use a higher temperature
+
+135
+00:04:57,500 --> 00:05:01,700
+so now let's take this same prompt that we just used
+
+136
+00:05:01,900 --> 00:05:04,300
+and let's try generating an email
+
+137
+00:05:04,600 --> 00:05:06,200
+but let's use a higher temperature
+
+138
+00:05:06,566 --> 00:05:09,133
+so in our get completion function
+
+139
+00:05:09,566 --> 00:05:11,566
+that we've been using throughout the videos
+
+140
+00:05:12,100 --> 00:05:14,066
+we have kind of specified a model
+
+141
+00:05:14,066 --> 00:05:15,300
+and then also a temperature
+
+142
+00:05:15,300 --> 00:05:16,700
+but we've kind of set them to default
+
+143
+00:05:16,700 --> 00:05:18,666
+so now let's try varying the temperature
+
+144
+00:05:21,333 --> 00:05:23,900
+so we use the prompt and then
+
+145
+00:05:27,666 --> 00:05:29,700
+let's try temperature 0.7
+
+146
+00:05:33,733 --> 00:05:35,566
+and so with temperature 0
+
+147
+00:05:35,566 --> 00:05:37,466
+every time you execute the same prompt
+
+148
+00:05:37,466 --> 00:05:38,400
+you should expect
+
+149
+00:05:39,000 --> 00:05:40,666
+the same completion
+
+150
+00:05:40,733 --> 00:05:42,700
+whereas with temperature 0.7
+
+151
+00:05:42,700 --> 00:05:44,900
+you'll get a different output every time
+
+152
+00:05:45,266 --> 00:05:46,700
+so here we have
+
+153
+00:05:47,566 --> 00:05:50,666
+our email and as you can see it's different to
+
+154
+00:05:50,733 --> 00:05:52,933
+the email that we kind of received previously
+
+155
+00:05:53,133 --> 00:05:54,766
+and let's just execute it again
+
+156
+00:05:55,066 --> 00:05:57,733
+to show that we'll get a different email again
+
+157
+00:05:59,133 --> 00:06:01,533
+and here we have another different email
+
+158
+00:06:01,766 --> 00:06:04,100
+so I recommend that you kind of play
+
+159
+00:06:04,100 --> 00:06:06,666
+around with temperature yourself
+
+160
+00:06:06,766 --> 00:06:09,700
+maybe you could pause the video now and try this
+
+161
+00:06:10,266 --> 00:06:12,533
+prompt with a variety of different temperatures
+
+162
+00:06:12,533 --> 00:06:14,366
+just to see how the outputs vary
+
+163
+00:06:15,666 --> 00:06:17,066
+so to summarise
+
+164
+00:06:17,333 --> 00:06:19,766
+at higher temperatures the outputs from the model
+
+165
+00:06:19,766 --> 00:06:21,533
+are kind of more random
+
+166
+00:06:21,533 --> 00:06:21,966
+you can
+
+167
+00:06:21,966 --> 00:06:24,333
+almost think of it as that at higher temperatures
+
+168
+00:06:24,333 --> 00:06:25,133
+the assistant
+
+169
+00:06:25,133 --> 00:06:26,766
+is more distractable but
+
+170
+00:06:26,766 --> 00:06:28,133
+maybe more creative
+
+171
+00:06:29,566 --> 00:06:31,933
+in the next video we're going to talk more about
+
+172
+00:06:32,133 --> 00:06:34,333
+the chat completions endpoint format
+
+173
+00:06:34,333 --> 00:06:36,533
+and how you can create a custom chat bot
+
+174
+00:06:36,533 --> 00:06:37,800
+using this format
+

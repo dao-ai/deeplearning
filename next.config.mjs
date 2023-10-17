@@ -24,7 +24,7 @@ const nextConfig = {
 const withMDX = createMDX({
   options: {
     remarkPlugins: [
-      remarkGfm,
+      // remarkGfm, // 不支持in code `code`
       remarkFrontmatter,
       remarkMdxFrontmatter,
       // remarkMdxToc

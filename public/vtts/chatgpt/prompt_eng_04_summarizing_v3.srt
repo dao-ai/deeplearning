@@ -1,0 +1,748 @@
+1
+00:00:05,100 --> 00:00:07,166
+there's so much text in today's world
+
+2
+00:00:07,266 --> 00:00:08,700
+pretty much none of us have
+
+3
+00:00:08,700 --> 00:00:10,900
+enough time to read all the things we wish
+
+4
+00:00:10,933 --> 00:00:12,166
+we had time to
+
+5
+00:00:12,700 --> 00:00:13,500
+so one of the most
+
+6
+00:00:13,500 --> 00:00:15,300
+exciting applications I've seen of large
+
+7
+00:00:15,300 --> 00:00:16,900
+language models is use it
+
+8
+00:00:16,933 --> 00:00:18,500
+to summarize text
+
+9
+00:00:18,500 --> 00:00:20,266
+and this is something that I'm seeing
+
+10
+00:00:20,333 --> 00:00:22,066
+multiple teams built into
+
+11
+00:00:22,066 --> 00:00:24,100
+multiple software applications
+
+12
+00:00:24,400 --> 00:00:26,933
+you can do this in the Chart GPT web interface
+
+13
+00:00:26,933 --> 00:00:28,933
+I do this all the time to summarise articles
+
+14
+00:00:28,933 --> 00:00:30,000
+so I can just kind of
+
+15
+00:00:30,300 --> 00:00:32,000
+read the content of many more articles than I
+
+16
+00:00:32,000 --> 00:00:32,900
+previously could
+
+17
+00:00:33,366 --> 00:00:35,200
+and if you want to do this more programmatically
+
+18
+00:00:35,200 --> 00:00:37,266
+you'll see how to in this lesson
+
+19
+00:00:37,766 --> 00:00:38,466
+so with that
+
+20
+00:00:38,466 --> 00:00:40,766
+let's dig into the code to see how you could
+
+21
+00:00:40,766 --> 00:00:43,000
+use this yourself to summarise text
+
+22
+00:00:43,366 --> 00:00:44,900
+so let's start off with the same
+
+23
+00:00:44,900 --> 00:00:46,566
+starter code as you saw before
+
+24
+00:00:46,566 --> 00:00:47,966
+of import openai
+
+25
+00:00:48,100 --> 00:00:50,700
+load the API key and here's that get completion
+
+26
+00:00:50,800 --> 00:00:51,900
+Holper function
+
+27
+00:00:52,533 --> 00:00:54,166
+I'm going to use as
+
+28
+00:00:54,800 --> 00:00:56,200
+a running example
+
+29
+00:00:56,666 --> 00:01:00,300
+the task of summarizing this product review
+
+30
+00:01:00,500 --> 00:01:01,900
+got this Panda plush toy
+
+31
+00:01:01,900 --> 00:01:02,533
+from a daughter's
+
+32
+00:01:02,533 --> 00:01:04,466
+birthday who loves it and takes it everywhere
+
+33
+00:01:04,466 --> 00:01:05,766
+and so on and so on
+
+34
+00:01:06,133 --> 00:01:09,200
+if you're building an e commerce website
+
+35
+00:01:10,200 --> 00:01:13,466
+and there's just a large volume of reviews
+
+36
+00:01:13,566 --> 00:01:14,300
+having a tool
+
+37
+00:01:14,300 --> 00:01:17,133
+to summarise the lengthy reviews could give you a way
+
+38
+00:01:17,133 --> 00:01:18,400
+to very quickly
+
+39
+00:01:18,400 --> 00:01:21,300
+glance over more reviews to get a better sense of what
+
+40
+00:01:21,400 --> 00:01:23,133
+all your customers are thinking
+
+41
+00:01:24,066 --> 00:01:26,600
+so here's a prompt for generating a summary
+
+42
+00:01:27,166 --> 00:01:28,366
+your task is generally short
+
+43
+00:01:28,366 --> 00:01:30,366
+some we have a probably review from e commerce website
+
+44
+00:01:30,366 --> 00:01:31,566
+summarize review below
+
+45
+00:01:31,766 --> 00:01:35,100
+and so on in Atmos 30 words
+
+46
+00:01:36,500 --> 00:01:38,166
+and so this is
+
+47
+00:01:38,300 --> 00:01:41,133
+Softencupe Panda plush toy loved by daughter a
+
+48
+00:01:41,366 --> 00:01:43,366
+bit smaller than a price arrive early
+
+49
+00:01:43,366 --> 00:01:44,933
+not bad it's a pretty good summary
+
+50
+00:01:45,133 --> 00:01:47,700
+and as you saw in the previous video
+
+51
+00:01:47,733 --> 00:01:49,500
+you can also play with things like
+
+52
+00:01:49,500 --> 00:01:50,733
+controlling the character count
+
+53
+00:01:50,733 --> 00:01:52,366
+or the number of sentences
+
+54
+00:01:52,366 --> 00:01:55,166
+to affect the length of this summary
+
+55
+00:01:55,666 --> 00:01:56,066
+now
+
+56
+00:01:56,066 --> 00:01:58,566
+sometimes when creating a summary if you have a very
+
+57
+00:01:58,566 --> 00:02:00,800
+specific purpose in mind for the summary
+
+58
+00:02:01,166 --> 00:02:03,666
+for example if you want to give feedback
+
+59
+00:02:03,666 --> 00:02:05,333
+to the shipping department
+
+60
+00:02:05,366 --> 00:02:07,400
+you can also modify the prompt
+
+61
+00:02:07,466 --> 00:02:08,400
+to reflect that
+
+62
+00:02:08,400 --> 00:02:10,666
+so that they can generate a summary that is
+
+63
+00:02:10,866 --> 00:02:12,133
+more applicable
+
+64
+00:02:12,533 --> 00:02:15,300
+to one particularly group in your business
+
+65
+00:02:15,466 --> 00:02:17,800
+so for example if I add
+
+66
+00:02:18,366 --> 00:02:19,166
+to give
+
+67
+00:02:19,933 --> 00:02:20,900
+feedback
+
+68
+00:02:21,700 --> 00:02:22,533
+to the
+
+69
+00:02:24,266 --> 00:02:25,500
+shipping department
+
+70
+00:02:26,133 --> 00:02:29,166
+let's say I changed this too start to focus on
+
+71
+00:02:29,933 --> 00:02:31,666
+any aspects that I mentioned
+
+72
+00:02:33,700 --> 00:02:35,400
+shipping and delivery of the product
+
+73
+00:02:35,533 --> 00:02:37,733
+and if I run this then
+
+74
+00:02:38,766 --> 00:02:40,133
+again you get a summary
+
+75
+00:02:40,133 --> 00:02:42,266
+but instead of starting off with
+
+76
+00:02:42,266 --> 00:02:43,933
+Softing Cupanda plush toy
+
+77
+00:02:44,066 --> 00:02:46,766
+it now focuses on the fact that it arrived a day
+
+78
+00:02:46,766 --> 00:02:47,566
+earlier
+
+79
+00:02:48,333 --> 00:02:50,533
+than expected and then the store has you know
+
+80
+00:02:50,533 --> 00:02:51,566
+other details then
+
+81
+00:02:53,333 --> 00:02:56,466
+or as another example if we aren't
+
+82
+00:02:56,600 --> 00:02:59,300
+trying to give feedback to the shipping department
+
+83
+00:02:59,500 --> 00:03:02,066
+but let's say we want to give feedback
+
+84
+00:03:02,200 --> 00:03:03,933
+to the pricing department
+
+85
+00:03:09,466 --> 00:03:11,266
+so the pricing department is
+
+86
+00:03:12,166 --> 00:03:14,900
+responsible determining the price of the product
+
+87
+00:03:15,200 --> 00:03:16,166
+and
+
+88
+00:03:17,166 --> 00:03:19,500
+I'm going to tell it to focus on
+
+89
+00:03:20,666 --> 00:03:21,333
+any aspects
+
+90
+00:03:21,333 --> 00:03:23,933
+they're relevant to the price and perceive value
+
+91
+00:03:25,100 --> 00:03:27,733
+then just generates a different summary
+
+92
+00:03:28,600 --> 00:03:32,533
+that it says maybe the price may be too high for a size
+
+93
+00:03:33,400 --> 00:03:35,333
+now in the some reads that I've
+
+94
+00:03:35,333 --> 00:03:37,466
+generated for the shipping department or the
+
+95
+00:03:37,600 --> 00:03:39,000
+pricing department it
+
+96
+00:03:39,133 --> 00:03:42,300
+focus a bit more on information relevant
+
+97
+00:03:42,333 --> 00:03:44,266
+to those specific departments
+
+98
+00:03:44,266 --> 00:03:46,900
+and in fact feel free to pause the video now and
+
+99
+00:03:47,133 --> 00:03:50,566
+maybe ask it to generate information for
+
+100
+00:03:51,100 --> 00:03:53,366
+the product department responsible for the cosmic
+
+101
+00:03:53,366 --> 00:03:54,566
+experience of the product
+
+102
+00:03:55,166 --> 00:03:56,733
+or for something else that you think
+
+103
+00:03:56,733 --> 00:03:58,200
+might be interesting to an
+
+104
+00:03:58,366 --> 00:03:59,800
+e commerce site
+
+105
+00:04:01,766 --> 00:04:03,100
+but in these summaries
+
+106
+00:04:03,100 --> 00:04:05,500
+even though it generated the information
+
+107
+00:04:05,666 --> 00:04:07,133
+relevant to shipping it had
+
+108
+00:04:07,133 --> 00:04:09,733
+some other information too which you could decide
+
+109
+00:04:09,900 --> 00:04:11,366
+may or may not be helpful
+
+110
+00:04:12,100 --> 00:04:12,766
+so
+
+111
+00:04:12,766 --> 00:04:16,600
+depending on how you want to summarise it you can also
+
+112
+00:04:16,866 --> 00:04:22,166
+ask it to extract information rather than summarize it
+
+113
+00:04:22,900 --> 00:04:24,366
+so here's a prompt that says
+
+114
+00:04:24,366 --> 00:04:26,733
+Utah's extract relevant information
+
+115
+00:04:27,400 --> 00:04:29,766
+to give feedback to shipping department and now
+
+116
+00:04:29,900 --> 00:04:32,733
+it just says probably arrived a day earlier
+
+117
+00:04:33,000 --> 00:04:34,066
+than expected
+
+118
+00:04:34,266 --> 00:04:35,300
+without all of the
+
+119
+00:04:35,333 --> 00:04:36,333
+other information
+
+120
+00:04:36,333 --> 00:04:39,133
+which was also hopeful in the general summary but
+
+121
+00:04:39,466 --> 00:04:40,900
+less specific to the
+
+122
+00:04:41,066 --> 00:04:41,800
+shipping department
+
+123
+00:04:41,800 --> 00:04:42,966
+if all I wanted to know is
+
+124
+00:04:42,966 --> 00:04:44,300
+what happened with the shipping
+
+125
+00:04:45,533 --> 00:04:48,266
+lastly let me just share of you a concrete example
+
+126
+00:04:48,366 --> 00:04:51,366
+for how to use this in a workflow to help
+
+127
+00:04:51,500 --> 00:04:53,100
+summarize multiple reviews
+
+128
+00:04:53,100 --> 00:04:55,100
+to make them easier to read
+
+129
+00:04:56,500 --> 00:04:57,333
+so
+
+130
+00:04:58,100 --> 00:05:01,166
+here are a few reviews this is kind of long but
+
+131
+00:05:01,500 --> 00:05:03,400
+here's the second review for a standing lamp
+
+132
+00:05:03,400 --> 00:05:04,800
+need a lamp from a bedroom
+
+133
+00:05:04,866 --> 00:05:07,300
+here's a third review for an electric toothbrush
+
+134
+00:05:07,300 --> 00:05:09,100
+my dental hygienist recommended
+
+135
+00:05:09,533 --> 00:05:12,933
+kind of a long review about a electric tube brush
+
+136
+00:05:13,166 --> 00:05:16,166
+this is a review for a blender when it's at so set 17
+
+137
+00:05:16,400 --> 00:05:18,766
+pieces to someone seasonal sale and so on and so on
+
+138
+00:05:18,766 --> 00:05:20,133
+this is actually a lot of texts
+
+139
+00:05:20,166 --> 00:05:21,733
+if you want feel free to pause the video
+
+140
+00:05:21,733 --> 00:05:23,066
+and read through all this text
+
+141
+00:05:23,300 --> 00:05:24,966
+but one of you want to know what these
+
+142
+00:05:25,366 --> 00:05:27,566
+reviewers wrotes without having to
+
+143
+00:05:27,600 --> 00:05:30,100
+stop and read all this in detail
+
+144
+00:05:30,566 --> 00:05:32,333
+so I'm going to set review 1
+
+145
+00:05:33,133 --> 00:05:36,166
+to be just the product review that we had up there
+
+146
+00:05:41,466 --> 00:05:44,966
+and I'm gonna put all of these reviews into a list
+
+147
+00:05:44,966 --> 00:05:47,533
+and now if I implement a
+
+148
+00:05:49,133 --> 00:05:51,200
+full loop over the reviews
+
+149
+00:05:53,666 --> 00:05:55,100
+so here's my prompt
+
+150
+00:05:55,300 --> 00:05:58,600
+and here I've asked it to summarise it in at most
+
+151
+00:05:59,333 --> 00:06:02,300
+20 words then let's have it
+
+152
+00:06:05,500 --> 00:06:08,366
+get the response and print it out and let's run that
+
+153
+00:06:10,466 --> 00:06:11,400
+and it prints out
+
+154
+00:06:11,400 --> 00:06:14,000
+the first review is that Panda toy review
+
+155
+00:06:14,166 --> 00:06:15,700
+some really review of the lamp
+
+156
+00:06:16,200 --> 00:06:20,000
+some review of the toothbrush and then the blender
+
+157
+00:06:21,466 --> 00:06:23,666
+and so if you have
+
+158
+00:06:24,566 --> 00:06:26,100
+websites where you have
+
+159
+00:06:26,200 --> 00:06:29,133
+hundreds of reviews you can imagine
+
+160
+00:06:29,500 --> 00:06:32,866
+how you might use this to build a dashboard to take
+
+161
+00:06:32,866 --> 00:06:34,333
+huge numbers of reviews
+
+162
+00:06:34,400 --> 00:06:36,533
+generate summaries of them so that
+
+163
+00:06:37,366 --> 00:06:39,900
+you or someone else can browse the reviews much more
+
+164
+00:06:39,900 --> 00:06:42,800
+quickly and then if they wish maybe click in
+
+165
+00:06:43,300 --> 00:06:47,400
+to see the original longer review and this can help you
+
+166
+00:06:47,866 --> 00:06:49,800
+efficiently get a better sense of what
+
+167
+00:06:49,800 --> 00:06:51,566
+all of your customers are thinking
+
+168
+00:06:53,333 --> 00:06:53,600
+alright
+
+169
+00:06:53,600 --> 00:06:57,000
+so that's it for summarizing and I hope that you can
+
+170
+00:06:57,000 --> 00:06:57,666
+picture
+
+171
+00:06:57,666 --> 00:07:00,600
+if you have any applications with many pieces of text
+
+172
+00:07:00,800 --> 00:07:01,600
+how you can use
+
+173
+00:07:01,600 --> 00:07:04,500
+prompts like these to summarize them to help people
+
+174
+00:07:04,566 --> 00:07:06,800
+quickly get a sense of what's in the text
+
+175
+00:07:06,800 --> 00:07:08,133
+the many pieces of text
+
+176
+00:07:08,133 --> 00:07:10,966
+and perhaps optionally dig in more if they wish
+
+177
+00:07:12,366 --> 00:07:13,666
+in the next video
+
+178
+00:07:13,666 --> 00:07:14,333
+we'll look at
+
+179
+00:07:14,333 --> 00:07:16,800
+another capability of lash language models
+
+180
+00:07:16,800 --> 00:07:18,666
+which is to make inferences
+
+181
+00:07:18,666 --> 00:07:20,600
+using text for example
+
+182
+00:07:20,700 --> 00:07:21,600
+whether you had
+
+183
+00:07:21,600 --> 00:07:24,166
+a game product reviews and you wanted to very quickly
+
+184
+00:07:24,166 --> 00:07:25,200
+get a sense of
+
+185
+00:07:25,266 --> 00:07:28,366
+which product reviews have a positive or negative
+
+186
+00:07:28,500 --> 00:07:29,300
+sentiment
+
+187
+00:07:29,533 --> 00:07:32,300
+let's take a look at how to do that in the next video
+

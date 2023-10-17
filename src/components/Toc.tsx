@@ -20,10 +20,12 @@ function SubToc({ item, ...props }: any) {
 
 export function Toc({ toc }: any) {
   return (
-    <ul className="menu w-56 rounded-box">
-      {toc.map((item: any, index: number) => (
-        <SubToc key={index} item={item} />
-      ))}
-    </ul>
+    toc && (
+      <ul className="menu w-56 rounded-box">
+        {toc.map((item: any, index: number) => (
+          <SubToc key={index} item={item} />
+        ))}
+      </ul>
+    )
   );
 }

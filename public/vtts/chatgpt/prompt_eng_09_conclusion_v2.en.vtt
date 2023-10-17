@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:05.300 --> 00:00:07.333
+congratulations on making it to the end
+
+00:00:07.333 --> 00:00:08.466
+of this short course
+
+00:00:09.266 --> 00:00:12.166
+in summary in this short course you've Learned about
+
+00:00:12.200 --> 00:00:14.366
+two key principles for prompting
+
+00:00:14.600 --> 00:00:15.200
+right clearance
+
+00:00:15.200 --> 00:00:17.566
+specific instructions and when it's appropriate
+
+00:00:17.566 --> 00:00:19.066
+give them all the time to think
+
+00:00:19.400 --> 00:00:20.700
+you also Learned about iterative
+
+00:00:20.700 --> 00:00:21.733
+prompt development
+
+00:00:21.733 --> 00:00:24.200
+and how having a process to get to the prompt is right
+
+00:00:24.200 --> 00:00:26.100
+for your application is key
+
+00:00:26.400 --> 00:00:27.400
+and we went through
+
+00:00:27.400 --> 00:00:29.100
+a few capabilities of large
+
+00:00:29.100 --> 00:00:31.800
+language models that are useful for many applications
+
+00:00:31.866 --> 00:00:34.000
+specifically summarizing inferring
+
+00:00:34.166 --> 00:00:36.300
+transforming and expanding
+
+00:00:36.533 --> 00:00:39.866
+and you also saw how to build a custom chatbot
+
+00:00:40.133 --> 00:00:40.933
+that was a lot
+
+00:00:40.933 --> 00:00:43.300
+that you Learned in just one short course
+
+00:00:43.300 --> 00:00:46.333
+and I hope you enjoyed going through these materials
+
+00:00:46.366 --> 00:00:47.533
+we hope you'll come up with some
+
+00:00:47.533 --> 00:00:49.133
+ideas for applications that you can
+
+00:00:49.133 --> 00:00:50.166
+build yourself now
+
+00:00:50.166 --> 00:00:52.100
+and please go try this out and let us
+
+00:00:52.100 --> 00:00:53.166
+know what you come up with
+
+00:00:53.266 --> 00:00:54.733
+no application is too small
+
+00:00:54.733 --> 00:00:55.300
+it's you know
+
+00:00:55.300 --> 00:00:57.133
+fine to start with something that's kind of
+
+00:00:57.133 --> 00:00:57.533
+a very
+
+00:00:57.533 --> 00:00:59.866
+small project with maybe a little bit of utility
+
+00:00:59.900 --> 00:01:01.800
+or maybe it's not even useful at all
+
+00:01:01.800 --> 00:01:03.266
+it's just something fun
+
+00:01:03.500 --> 00:01:04.200
+yeah and I find
+
+00:01:04.200 --> 00:01:06.200
+playing with these models actually really fun
+
+00:01:06.200 --> 00:01:07.466
+so go play with it
+
+00:01:07.466 --> 00:01:09.933
+yeah I agree it's a good weekend activity
+
+00:01:10.066 --> 00:01:11.100
+speaking from experience
+
+00:01:13.400 --> 00:01:14.966
+and just you know
+
+00:01:14.966 --> 00:01:15.266
+please
+
+00:01:15.266 --> 00:01:17.366
+use the learnings from your first project to build
+
+00:01:17.366 --> 00:01:18.766
+about the second project and
+
+00:01:18.766 --> 00:01:20.566
+you know maybe even about the third project
+
+00:01:20.566 --> 00:01:24.166
+so on that's kind of how I have kind of
+
+00:01:24.500 --> 00:01:26.966
+grown over time using these models myself as well
+
+00:01:27.866 --> 00:01:29.933
+or if you have an idea for a bigger project already
+
+00:01:29.933 --> 00:01:31.200
+just go for it
+
+00:01:32.000 --> 00:01:33.766
+and you know as a reminder
+
+00:01:34.366 --> 00:01:35.100
+these kind of large
+
+00:01:35.100 --> 00:01:37.200
+language models are a very powerful technology
+
+00:01:37.200 --> 00:01:39.266
+so it kind of goes without saying that we
+
+00:01:39.266 --> 00:01:41.166
+ask you to use them responsibly
+
+00:01:41.166 --> 00:01:41.666
+and please
+
+00:01:41.666 --> 00:01:43.933
+only build things that will have a positive impact
+
+00:01:44.366 --> 00:01:46.300
+fully agree I think in this age
+
+00:01:46.300 --> 00:01:47.466
+people that built AI
+
+00:01:47.466 --> 00:01:49.500
+systems can have a huge impact on others
+
+00:01:49.500 --> 00:01:52.266
+so it's more important than ever that all of us
+
+00:01:52.266 --> 00:01:54.533
+only use these tools responsibly
+
+00:01:55.666 --> 00:01:57.000
+and I think
+
+00:01:57.000 --> 00:01:58.566
+building launch language model
+
+00:01:58.566 --> 00:02:00.600
+based applications is just a very
+
+00:02:00.600 --> 00:02:02.800
+exciting and drawing view right now
+
+00:02:03.000 --> 00:02:05.133
+and now that you've finished this course
+
+00:02:05.133 --> 00:02:07.666
+I think you now have a wealth of knowledge
+
+00:02:07.933 --> 00:02:08.933
+to let you build
+
+00:02:08.933 --> 00:02:11.266
+things that few people today know how to
+
+00:02:11.666 --> 00:02:13.300
+so I hope you also help us to
+
+00:02:13.300 --> 00:02:15.466
+spread the word and encourage others
+
+00:02:15.466 --> 00:02:17.066
+to take this course too
+
+00:02:17.566 --> 00:02:20.466
+in closing I hope you had fun during this course
+
+00:02:20.466 --> 00:02:21.966
+and I want to thank you
+
+00:02:22.000 --> 00:02:23.200
+for finishing this course
+
+00:02:23.200 --> 00:02:24.100
+and both easy
+
+00:02:24.100 --> 00:02:26.500
+and I look forward to hearing about the amazing things
+
+00:02:26.500 --> 00:02:27.300
+that you build
+

@@ -7,11 +7,21 @@ export default function Breadcrumb() {
   const segments = useSelectedLayoutSegments();
   console.log("segments", segments);
   let pathArr = [""];
-  const breadcrumbs = segments.map((segment) => {
-    pathArr.push(segment);
-    const path = pathArr.join("/");
-    return { path, segment };
-  });
+  // const breadcrumbs = segments.map((segment) => {
+  //   console.log("segment", segment.split("/"));
+  //   pathArr.push(segment);
+  //   const path = pathArr.join("/");
+  //   return { path, segment };
+  // });
+  let breadcrumbs = [];
+  for (const segment of segments) {
+    let segmentSubs = segment.split("/");
+    for (let segmentSub of segmentSubs) {
+      pathArr.push(segmentSub);
+      const path = pathArr.join("/");
+      breadcrumbs.push({ path, segment: segmentSub });
+    }
+  }
 
   return (
     <div className="max-w-xs text-sm breadcrumbs">

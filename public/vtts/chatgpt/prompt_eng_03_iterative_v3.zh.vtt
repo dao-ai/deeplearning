@@ -1,0 +1,995 @@
+WEBVTT
+
+00:00:05.266 --> 00:00:07.166
+当我在构建大型应用程序时
+
+00:00:07.166 --> 00:00:08.133
+语言模型
+
+00:00:08.133 --> 00:00:09.066
+我想我从来没有
+
+00:00:09.066 --> 00:00:11.133
+来到我最后在期末考试中使用的提示符
+
+00:00:11.133 --> 00:00:13.600
+我第一次尝试就申请了
+
+00:00:13.700 --> 00:00:15.333
+这并不重要
+
+00:00:15.333 --> 00:00:17.800
+只要你有一个好的过程
+
+00:00:17.866 --> 00:00:19.533
+有趣的是，让你的提示更好
+
+00:00:20.200 --> 00:00:22.166
+然后你就能得到一些
+
+00:00:22.166 --> 00:00:24.266
+对你想要完成的任务很有效
+
+00:00:25.366 --> 00:00:26.900
+你可能听我说过，当我
+
+00:00:26.900 --> 00:00:28.000
+交易一个机器学习模型
+
+00:00:28.000 --> 00:00:29.966
+第一次几乎没有成功过
+
+00:00:29.966 --> 00:00:30.766
+事实上，我
+
+00:00:30.766 --> 00:00:33.466
+如果第一辆I型火车成功了，我很惊讶
+
+00:00:33.533 --> 00:00:34.666
+我想我们是在提示
+
+00:00:34.666 --> 00:00:35.733
+成功的几率
+
+00:00:35.733 --> 00:00:37.866
+第一次可能会高一点
+
+00:00:37.933 --> 00:00:39.466
+但是很简单
+
+00:00:39.966 --> 00:00:42.133
+第一个提示是否有效并不重要
+
+00:00:42.133 --> 00:00:43.866
+过程中最重要的是什么
+
+00:00:43.900 --> 00:00:46.600
+获取适用于您的应用程序的两个提示
+
+00:00:46.866 --> 00:00:48.766
+好了，让我们进入代码
+
+00:00:48.766 --> 00:00:51.133
+让我给你们看一些框架
+
+00:00:51.133 --> 00:00:52.333
+如何迭代
+
+00:00:52.333 --> 00:00:53.466
+制定一个提示
+
+00:00:54.200 --> 00:00:54.966
+正确的
+
+00:00:54.966 --> 00:00:57.900
+如果你上过我的机器学习课程
+
+00:00:58.000 --> 00:00:59.366
+在你看到之前
+
+00:00:59.600 --> 00:01:00.700
+我用一个图表
+
+00:01:00.700 --> 00:01:02.800
+随着机器学习的发展
+
+00:01:02.900 --> 00:01:04.200
+你经常有想法
+
+00:01:04.966 --> 00:01:06.533
+然后实现它
+
+00:01:06.533 --> 00:01:08.700
+因此，编写代码获取数据
+
+00:01:09.100 --> 00:01:10.100
+训练你的模型
+
+00:01:10.100 --> 00:01:12.700
+这就得到了一个实验结果
+
+00:01:12.700 --> 00:01:14.400
+然后你可以看看输出
+
+00:01:14.600 --> 00:01:16.100
+也许可以做错误分析
+
+00:01:16.100 --> 00:01:17.800
+找出它在哪里起作用，在哪里不起作用
+
+00:01:17.800 --> 00:01:19.866
+然后也许会改变你对
+
+00:01:20.000 --> 00:01:22.200
+确切地说，你想解决什么问题，或者怎么解决
+
+00:01:22.200 --> 00:01:23.000
+接近它
+
+00:01:23.333 --> 00:01:25.000
+他们改变了实施方式
+
+00:01:25.100 --> 00:01:25.500
+和
+
+00:01:25.500 --> 00:01:27.933
+再做一次实验，然后不断重复
+
+00:01:27.933 --> 00:01:30.966
+来看看一个有效的机器学习模型
+
+00:01:31.400 --> 00:01:33.200
+如果你不熟悉机器学习
+
+00:01:33.200 --> 00:01:33.866
+我还没见过
+
+00:01:33.866 --> 00:01:34.600
+这张图之前
+
+00:01:34.600 --> 00:01:35.333
+别担心
+
+00:01:35.333 --> 00:01:38.166
+这对接下来的演讲来说并不重要
+
+00:01:38.400 --> 00:01:41.166
+但是当你写提示的时候
+
+00:01:42.166 --> 00:01:44.666
+使用Lom开发应用程序
+
+00:01:45.333 --> 00:01:48.166
+这个过程可能非常相似
+
+00:01:48.666 --> 00:01:50.666
+你对自己想做的事情有什么想法
+
+00:01:50.666 --> 00:01:51.900
+你想完成的任务
+
+00:01:52.133 --> 00:01:53.766
+然后你就可以
+
+00:01:54.166 --> 00:01:55.900
+第一次尝试写作
+
+00:01:56.066 --> 00:01:59.300
+一个提示，希望是明确和具体的
+
+00:01:59.733 --> 00:02:03.933
+如果合适的话，给系统一些思考的时间
+
+00:02:04.400 --> 00:02:07.766
+然后你可以运行它，看看得到什么结果
+
+00:02:07.800 --> 00:02:10.200
+如果效果不好，第一次也不行
+
+00:02:10.300 --> 00:02:12.133
+的迭代过程
+
+00:02:12.266 --> 00:02:14.900
+弄清楚为什么指令没有
+
+00:02:14.900 --> 00:02:15.533
+足够清晰
+
+00:02:15.533 --> 00:02:17.766
+或者为什么它没有给专辑足够的时间去思考
+
+00:02:18.100 --> 00:02:20.466
+允许你完善想法完善提示
+
+00:02:20.533 --> 00:02:23.366
+以此循环多次
+
+00:02:23.566 --> 00:02:25.166
+直到你得到一个适合你的提示
+
+00:02:25.166 --> 00:02:26.000
+应用程序
+
+00:02:26.733 --> 00:02:30.200
+这也是我个人没有付钱的原因
+
+00:02:30.533 --> 00:02:31.800
+同样多的关注
+
+00:02:32.000 --> 00:02:35.133
+到网上说30个完美舞会的文章
+
+00:02:35.133 --> 00:02:35.933
+因为我认为
+
+00:02:36.000 --> 00:02:37.333
+可能没有
+
+00:02:37.333 --> 00:02:39.733
+太阳底下的一切都能得到完美的提示
+
+00:02:39.733 --> 00:02:41.733
+这比你有一个流程更重要
+
+00:02:41.900 --> 00:02:43.666
+为您开发一个好的提示
+
+00:02:43.666 --> 00:02:45.066
+特定的应用程序
+
+00:02:46.000 --> 00:02:49.133
+让我们一起看一个代码中的例子
+
+00:02:49.133 --> 00:02:49.866
+I have here
+
+00:02:49.866 --> 00:02:52.500
+the starter code that you saw in the previous videos
+
+00:02:52.500 --> 00:02:54.400
+have import Openai importos
+
+00:02:54.800 --> 00:02:58.266
+here we get the Openai API key
+
+00:02:58.333 --> 00:03:00.733
+and this is the same helper function that you saw
+
+00:03:00.733 --> 00:03:01.933
+as last time
+
+00:03:02.700 --> 00:03:03.500
+and
+
+00:03:04.400 --> 00:03:08.366
+I'm going to use as the running example in this video
+
+00:03:08.600 --> 00:03:12.466
+the toss of summarizing a fact sheet for a chair
+
+00:03:13.166 --> 00:03:15.966
+so let me just paste that in here
+
+00:03:16.733 --> 00:03:19.300
+and feel free to pause the video and
+
+00:03:19.466 --> 00:03:22.333
+read this more carefully in the notebook on the left
+
+00:03:22.333 --> 00:03:25.133
+if you want but here's a factory for a chair
+
+00:03:25.166 --> 00:03:26.166
+with a description
+
+00:03:26.166 --> 00:03:28.166
+saying it's part of a beautiful family of MT
+
+00:03:28.266 --> 00:03:30.133
+century inspired and so on
+
+00:03:30.666 --> 00:03:31.933
+talks about the construction
+
+00:03:32.100 --> 00:03:33.466
+has the dimensions
+
+00:03:33.566 --> 00:03:36.766
+options for the chair materials and so on
+
+00:03:36.966 --> 00:03:37.900
+comes from Italy
+
+00:03:38.900 --> 00:03:42.166
+so let's say you want to take this fat sheet
+
+00:03:42.200 --> 00:03:45.100
+and help a marketing team write the description
+
+00:03:45.133 --> 00:03:47.500
+for a online retail website
+
+00:03:48.533 --> 00:03:49.500
+let me just quickly
+
+00:03:49.866 --> 00:03:53.800
+run these three and then we'll come up with a prompt
+
+00:03:56.600 --> 00:03:58.500
+as follows and it just
+
+00:03:59.333 --> 00:04:01.000
+and it just paces in
+
+00:04:02.166 --> 00:04:05.533
+so my promptpss your task is to help a marketing team
+
+00:04:05.666 --> 00:04:05.933
+create
+
+00:04:05.933 --> 00:04:07.766
+a description for a retail website of the product
+
+00:04:07.766 --> 00:04:09.000
+based on techno fact sheet
+
+00:04:09.166 --> 00:04:11.166
+write the project description and so on
+
+00:04:11.166 --> 00:04:13.666
+right so this is my first attempt to
+
+00:04:13.933 --> 00:04:16.900
+explain the task to the large language model
+
+00:04:17.200 --> 00:04:18.933
+so let me hit shift enter
+
+00:04:19.400 --> 00:04:21.333
+and this takes a few seconds to run
+
+00:04:23.366 --> 00:04:25.100
+and we get this result
+
+00:04:25.266 --> 00:04:27.700
+it looks like it's done a nice job
+
+00:04:27.866 --> 00:04:29.200
+writing a description
+
+00:04:29.200 --> 00:04:30.566
+introducing a stunning Miss Entry
+
+00:04:30.566 --> 00:04:31.700
+Inspire Office Chair
+
+00:04:31.700 --> 00:04:33.566
+Perfect Edition and so on
+
+00:04:33.866 --> 00:04:36.666
+but when we look at this I go boy this is really long
+
+00:04:36.666 --> 00:04:39.666
+it's done a nice job doing exactly what I asked it to
+
+00:04:39.866 --> 00:04:41.966
+which is start from the technical fact sheet
+
+00:04:42.100 --> 00:04:44.300
+and write a private description
+
+00:04:45.266 --> 00:04:46.700
+but when I look at as I go
+
+00:04:46.966 --> 00:04:48.000
+this is kind of long
+
+00:04:48.000 --> 00:04:50.300
+maybe we wanted to be a little bit shorter
+
+00:04:50.666 --> 00:04:52.933
+so I have had an idea
+
+00:04:52.966 --> 00:04:54.766
+I wrote a prompt got a result
+
+00:04:54.766 --> 00:04:56.866
+I'm not that happier of it because it's too long
+
+00:04:57.100 --> 00:05:01.333
+so I will then clarify my prompt
+
+00:05:03.133 --> 00:05:04.066
+and say
+
+00:05:05.666 --> 00:05:06.466
+use
+
+00:05:07.266 --> 00:05:09.133
+utmost 50 words
+
+00:05:09.500 --> 00:05:11.333
+to try to give better guidance on
+
+00:05:11.333 --> 00:05:12.733
+the desired length of this
+
+00:05:12.733 --> 00:05:14.266
+and this run of the game
+
+00:05:20.333 --> 00:05:22.366
+okay this actually looks like a
+
+00:05:22.366 --> 00:05:25.333
+much nicer short description of the product
+
+00:05:25.333 --> 00:05:27.366
+introducing on mid century inspired office chair
+
+00:05:27.566 --> 00:05:29.566
+and so on 5 were you just
+
+00:05:29.966 --> 00:05:32.733
+both stylish and practical not bad
+
+00:05:34.066 --> 00:05:37.500
+and let me double check the length that this is
+
+00:05:37.500 --> 00:05:39.100
+so I'm going to take the response
+
+00:05:39.166 --> 00:05:41.700
+split it going to where the spaces and then
+
+00:05:41.800 --> 00:05:42.866
+you print out the length
+
+00:05:42.866 --> 00:05:45.166
+so it's 52 words actually not bad
+
+00:05:46.100 --> 00:05:48.700
+large language models are okay
+
+00:05:48.700 --> 00:05:50.133
+but not that great
+
+00:05:50.133 --> 00:05:53.366
+at following instructions about a very precise workout
+
+00:05:53.366 --> 00:05:54.566
+but this is actually not bad
+
+00:05:54.566 --> 00:05:56.700
+sometimes it will print out something with
+
+00:05:56.966 --> 00:05:59.900
+60 or 65 and so on words but it's kind of
+
+00:06:00.133 --> 00:06:01.066
+within reason
+
+00:06:01.766 --> 00:06:04.333
+some of the things you could try to do would be
+
+00:06:04.800 --> 00:06:06.766
+to say use at most the
+
+00:06:07.300 --> 00:06:08.700
+three sentences
+
+00:06:14.200 --> 00:06:16.133
+let me run that again
+
+00:06:16.666 --> 00:06:18.933
+but these are different ways to tell the large
+
+00:06:18.933 --> 00:06:19.933
+language model
+
+00:06:19.966 --> 00:06:21.933
+what's the length of the upput that you want
+
+00:06:21.933 --> 00:06:24.400
+so this is one 2
+
+00:06:24.733 --> 00:06:28.300
+3 I count three sentences it also did a pretty good job
+
+00:06:28.666 --> 00:06:32.366
+and then I've also seen people sometimes do things like
+
+00:06:32.800 --> 00:06:35.766
+I don't know use that most 280 characters
+
+00:06:36.333 --> 00:06:38.333
+large language models because of
+
+00:06:38.400 --> 00:06:40.100
+the way they interpret text
+
+00:06:40.100 --> 00:06:41.733
+using something called a tokenizer
+
+00:06:41.733 --> 00:06:43.266
+which which I won't talk about
+
+00:06:43.466 --> 00:06:48.266
+but they tend to be so so accounting characters but
+
+00:06:49.200 --> 00:06:52.366
+let's see 281 characters is actually surprising
+
+00:06:52.366 --> 00:06:53.366
+any close usually a
+
+00:06:53.533 --> 00:06:56.333
+large language model doesn't get it quite as close
+
+00:06:56.333 --> 00:06:57.666
+but these are different ways
+
+00:06:57.700 --> 00:06:59.066
+they can play with to try to
+
+00:06:59.066 --> 00:07:00.666
+control the length of the output
+
+00:07:00.700 --> 00:07:02.166
+that you get but then just
+
+00:07:02.700 --> 00:07:05.766
+switch about to use at most 50 words
+
+00:07:09.066 --> 00:07:11.366
+and that's our result that we had just now
+
+00:07:12.733 --> 00:07:15.766
+as we continue to refine this text for our websites
+
+00:07:15.766 --> 00:07:18.100
+we might decide that
+
+00:07:18.466 --> 00:07:20.800
+this website isn't selling
+
+00:07:20.866 --> 00:07:23.366
+director consumers is actually intended
+
+00:07:23.500 --> 00:07:26.800
+to sell furniture to furniture retailers
+
+00:07:27.000 --> 00:07:29.400
+that would be more interested in the technical
+
+00:07:29.400 --> 00:07:30.666
+details of the chair
+
+00:07:30.666 --> 00:07:32.466
+and the materials of the chair
+
+00:07:32.733 --> 00:07:34.933
+in that case you can take this prompt and say
+
+00:07:35.400 --> 00:07:37.400
+I want to modify this prompt
+
+00:07:37.666 --> 00:07:39.700
+to get it to be more precise
+
+00:07:39.700 --> 00:07:41.766
+about the technical details
+
+00:07:42.300 --> 00:07:45.600
+so let me keep on modifying this prompt
+
+00:07:46.900 --> 00:07:47.933
+and I'm going to say
+
+00:07:48.800 --> 00:07:50.966
+this description is intended for furniture retailers
+
+00:07:50.966 --> 00:07:52.933
+so should be technical and focus on materials
+
+00:07:52.933 --> 00:07:54.466
+products and construct it from
+
+00:07:55.500 --> 00:07:56.766
+well let's run that
+
+00:07:58.533 --> 00:08:00.100
+and let's see
+
+00:08:01.533 --> 00:08:02.133
+not bad
+
+00:08:02.133 --> 00:08:05.666
+says you know cult aluminum base and pneumatic care
+
+00:08:06.766 --> 00:08:08.200
+high quality materials
+
+00:08:08.200 --> 00:08:11.266
+so by changing the prompt you can get it to
+
+00:08:11.400 --> 00:08:14.400
+focus more on specific characters
+
+00:08:14.400 --> 00:08:17.000
+on specific characteristics you want it to
+
+00:08:17.500 --> 00:08:18.300
+and
+
+00:08:18.966 --> 00:08:20.800
+when I look at this I might decide
+
+00:08:21.566 --> 00:08:23.100
+at the end of the description
+
+00:08:23.466 --> 00:08:26.666
+I also wanted to include
+
+00:08:27.300 --> 00:08:28.400
+the product IDS
+
+00:08:28.400 --> 00:08:31.400
+so the two offerings of this share SWC110
+
+00:08:31.933 --> 00:08:33.100
+Soc 100
+
+00:08:33.733 --> 00:08:34.533
+so
+
+00:08:35.133 --> 00:08:38.766
+maybe I can further improve this prompt
+
+00:08:39.966 --> 00:08:42.000
+and to get it to give me the product IDS
+
+00:08:42.000 --> 00:08:42.900
+I can add this
+
+00:08:42.900 --> 00:08:44.766
+instruction at the end of the description
+
+00:08:44.766 --> 00:08:45.566
+include every
+
+00:08:45.700 --> 00:08:48.200
+7 character product ID in the technical specification
+
+00:08:48.533 --> 00:08:49.333
+and
+
+00:08:49.900 --> 00:08:50.900
+let's run it
+
+00:08:51.666 --> 00:08:53.200
+and see what happens
+
+00:08:53.933 --> 00:08:56.866
+and so this is introduced to our missections file
+
+00:08:56.866 --> 00:08:57.733
+office share
+
+00:08:58.266 --> 00:09:02.600
+shell colours tossel plastic coating aluminum base
+
+00:09:02.800 --> 00:09:05.200
+practical some options
+
+00:09:06.300 --> 00:09:08.366
+talk about the two product IDS
+
+00:09:08.366 --> 00:09:09.933
+so this looks pretty good
+
+00:09:10.333 --> 00:09:12.466
+and what you've just seen is a
+
+00:09:12.800 --> 00:09:16.133
+short example of the iterative prompt development
+
+00:09:16.266 --> 00:09:18.600
+that many developers will go through
+
+00:09:19.200 --> 00:09:22.133
+and I think our guidelines is
+
+00:09:22.366 --> 00:09:23.566
+in the last video
+
+00:09:23.566 --> 00:09:26.800
+you saw user share a number of best practices
+
+00:09:26.800 --> 00:09:28.700
+and so what I usually do is
+
+00:09:28.733 --> 00:09:30.800
+keep best practices like that in mind
+
+00:09:30.933 --> 00:09:32.100
+be clear and specific
+
+00:09:32.100 --> 00:09:35.166
+and if necessary give the model time to think
+
+00:09:35.500 --> 00:09:38.200
+with those in mind is worthwhiles often
+
+00:09:38.500 --> 00:09:40.300
+take a first attempt at writing a prompt
+
+00:09:40.300 --> 00:09:41.933
+see what happens and then
+
+00:09:42.000 --> 00:09:44.766
+go from there to iteratively refine the prompt
+
+00:09:44.766 --> 00:09:46.166
+to get closer and closer
+
+00:09:46.400 --> 00:09:48.366
+to the result that you need
+
+00:09:49.733 --> 00:09:52.866
+and so a lot of the successful prompts that you may see
+
+00:09:52.900 --> 00:09:54.733
+using various programs was
+
+00:09:54.900 --> 00:09:57.200
+arrive at an iterative process
+
+00:09:57.400 --> 00:09:58.200
+like this
+
+00:09:58.933 --> 00:10:01.600
+just for fun let me show you an example of
+
+00:10:01.733 --> 00:10:03.133
+an even more complex
+
+00:10:03.133 --> 00:10:06.733
+prompt that might give you a sense of what Chat GPT
+
+00:10:07.133 --> 00:10:09.966
+can do which is I've just added a few
+
+00:10:10.200 --> 00:10:11.500
+extra instructions here
+
+00:10:11.766 --> 00:10:12.600
+after the description
+
+00:10:12.600 --> 00:10:15.100
+include the table that use the product dimensions
+
+00:10:15.100 --> 00:10:17.500
+and then you'll format everything as HTML
+
+00:10:17.500 --> 00:10:18.766
+so let's run that
+
+00:10:21.166 --> 00:10:22.200
+and in practice
+
+00:10:22.300 --> 00:10:24.800
+you would end up with a prompt like this
+
+00:10:24.933 --> 00:10:27.066
+really only after multiple iterations
+
+00:10:27.066 --> 00:10:28.366
+I don't think I know anyone
+
+00:10:28.666 --> 00:10:31.566
+that would write this exact prompt the first time
+
+00:10:31.700 --> 00:10:32.666
+they were trying to
+
+00:10:32.900 --> 00:10:35.100
+get the system to process a fact sheet
+
+00:10:35.866 --> 00:10:39.933
+and so this actually outputs a bunch of HDML
+
+00:10:40.500 --> 00:10:42.966
+let's display the HDML
+
+00:10:43.266 --> 00:10:45.166
+to see if this is even valid
+
+00:10:45.200 --> 00:10:46.966
+HDML and see if this works
+
+00:10:47.333 --> 00:10:49.133
+and I don't actually know what's going to work
+
+00:10:49.133 --> 00:10:49.766
+but let's see
+
+00:10:49.766 --> 00:10:51.766
+oh cool alright looks like I rend it
+
+00:10:52.400 --> 00:10:53.866
+so it has this really nice
+
+00:10:53.866 --> 00:10:55.566
+looking description of a chair
+
+00:10:56.700 --> 00:10:59.266
+construction materials
+
+00:10:59.466 --> 00:11:00.900
+product dimensions
+
+00:11:03.333 --> 00:11:05.933
+oh it looks like I left out the user
+
+00:11:05.933 --> 00:11:07.300
+most 50 words instructions
+
+00:11:07.300 --> 00:11:09.266
+so this is a little bit long but if you want that
+
+00:11:09.266 --> 00:11:12.066
+you can even feel free to pause the video
+
+00:11:12.066 --> 00:11:14.166
+tell it to be more succinct and
+
+00:11:14.166 --> 00:11:16.733
+regenerate this and see what results you get
+
+00:11:17.866 --> 00:11:19.900
+so I hope you take away from this video
+
+00:11:19.900 --> 00:11:22.766
+that prompt development is an iterative process
+
+00:11:22.766 --> 00:11:23.566
+try something
+
+00:11:23.766 --> 00:11:27.133
+see how it does not yet fulfill exactly what you want
+
+00:11:27.400 --> 00:11:28.800
+and then think about how to
+
+00:11:28.800 --> 00:11:31.600
+clarify your instructions or in some cases
+
+00:11:31.666 --> 00:11:33.933
+think about how to give it more space to think
+
+00:11:34.200 --> 00:11:35.466
+to get it closer
+
+00:11:35.500 --> 00:11:37.533
+to delivering the results that you want
+
+00:11:38.866 --> 00:11:41.100
+and I think the key to being an
+
+00:11:41.100 --> 00:11:42.866
+effective prompt engineer
+
+00:11:43.100 --> 00:11:46.533
+isn't so much about knowing the perfect prompt
+
+00:11:46.666 --> 00:11:49.733
+is about having a good process to develop prompts
+
+00:11:49.733 --> 00:11:50.866
+that are effective
+
+00:11:50.900 --> 00:11:52.366
+for your application
+
+00:11:52.933 --> 00:11:54.900
+and in this video I illustrated
+
+00:11:55.300 --> 00:11:58.166
+developing a prompt using just one example
+
+00:11:58.666 --> 00:12:01.133
+for more sophisticated applications
+
+00:12:01.166 --> 00:12:02.700
+sometimes you will have
+
+00:12:03.366 --> 00:12:07.300
+multiple examples say a list of 10 or even
+
+00:12:07.466 --> 00:12:09.400
+50 or 100 fat sheets
+
+00:12:09.533 --> 00:12:13.200
+and iteratively develop a prompt and evaluated
+
+00:12:13.533 --> 00:12:16.500
+against a large set of cases
+
+00:12:18.300 --> 00:12:21.333
+but for the early development of most applications
+
+00:12:21.466 --> 00:12:23.533
+I see many people developing it
+
+00:12:23.533 --> 00:12:26.500
+sort of the way I am with just one example
+
+00:12:26.766 --> 00:12:29.566
+but then for more mature applications sometimes
+
+00:12:29.866 --> 00:12:31.200
+it could be useful
+
+00:12:31.566 --> 00:12:35.266
+to evaluate prompt against a larger set of examples
+
+00:12:35.266 --> 00:12:36.066
+such as
+
+00:12:36.700 --> 00:12:38.500
+to test different Proms on
+
+00:12:38.733 --> 00:12:39.966
+dozens of fact sheets
+
+00:12:39.966 --> 00:12:42.766
+to see how is average or worst case performances
+
+00:12:42.766 --> 00:12:44.266
+on multiple fact sheets
+
+00:12:44.266 --> 00:12:46.800
+but usually you end up doing that
+
+00:12:46.900 --> 00:12:48.800
+only when an application is more mature
+
+00:12:48.800 --> 00:12:50.300
+and you have to have those metrics
+
+00:12:50.300 --> 00:12:51.700
+to drive that incremental
+
+00:12:51.700 --> 00:12:54.133
+last few steps of prompt improvement
+
+00:12:55.166 --> 00:12:56.000
+so with that
+
+00:12:56.266 --> 00:12:59.266
+please do play with the Jupiter code notebook
+
+00:12:59.266 --> 00:13:01.866
+examples and try out different variations and
+
+00:13:01.900 --> 00:13:03.200
+see what results you get
+
+00:13:03.566 --> 00:13:04.500
+and when you're done
+
+00:13:04.700 --> 00:13:06.333
+let's go on to the next video
+
+00:13:06.533 --> 00:13:09.400
+where we'll talk about one very common
+
+00:13:09.500 --> 00:13:13.400
+use of large language models in software applications
+
+00:13:13.466 --> 00:13:15.533
+which is to summarise text
+
+00:13:15.600 --> 00:13:18.133
+so when you're ready let's go on to the next video
+
