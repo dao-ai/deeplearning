@@ -24,4 +24,12 @@ bun dev
 
 ## daisyui
 
-##
+## react-player
+
+速度问题，使用了本地视频，太大就没有传到 git,可以使用网络链接
+
+修改`src/components/Player.tsx`里的 baseUrl 即可观看网络视频
+
+使用剪影翻译并导出字幕数据 srt，然后转换为 vtt
+
+应用有道翻译翻译字幕，我做的翻译插件[智译](https://marketplace.visualstudio.com/items?itemName=wohugb.intelitrans)
