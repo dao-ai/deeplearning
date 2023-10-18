@@ -100,746 +100,746 @@ WEBVTT
 当然在很多不同的语言中都有
 
 00:01:13.100 --> 00:01:14.866
-so this kind of imbues the model
+这是模型的一部分
 
 00:01:14.866 --> 00:01:16.733
-with the ability to do translation
+具备一定的翻译能力
 
 00:01:17.000 --> 00:01:19.533
-and these models know kind of hundreds of languages
+这些模型知道几百种语言
 
 00:01:19.533 --> 00:01:21.366
-to varying degrees of proficiency
+熟练程度不同
 
 00:01:21.700 --> 00:01:22.700
-and so we'll go through
+我们会继续讲下去
 
 00:01:22.700 --> 00:01:25.166
-some examples of how to use this capability
+一些如何使用此功能的示例
 
 00:01:26.500 --> 00:01:28.333
-so let's start off with something simple
+让我们从简单的开始
 
 00:01:29.200 --> 00:01:31.666
-so in this first example the prompt is
+在第一个例子中，提示符是
 
 00:01:31.800 --> 00:01:34.733
-translate the following English text to Spanish
+把下面的英文文本翻译成西班牙语
 
 00:01:35.200 --> 00:01:37.066
-hi I would like to order a blender
+你好，我想订购一台搅拌机
 
 00:01:37.400 --> 00:01:43.466
-and the response is ola mi gustaria or dena una liquid
+反应是液态的或液态的
 
 00:01:43.800 --> 00:01:44.533
 kuadora
 
 00:01:44.533 --> 00:01:47.866
-and I'm very sorry to all of you Spanish speakers
+我对所有说西班牙语的人感到非常抱歉
 
 00:01:47.866 --> 00:01:49.800
-I never Learned Spanish unfortunately
+不幸的是，我从未学过西班牙语
 
 00:01:50.200 --> 00:01:52.000
-as you can definitely tell
+你肯定能看出来
 
 00:01:53.566 --> 00:01:56.133
-okay let's try another example
+好，我们再来举个例子
 
 00:01:56.666 --> 00:01:57.466
-so
+所以
 
 00:01:58.400 --> 00:01:59.566
-in this example
+在这个例子中
 
 00:01:59.666 --> 00:02:02.866
-the prompt is tell me what language this is
+提示是告诉我这是什么语言
 
 00:02:03.800 --> 00:02:08.600
-and then this is in French combiancutlu lampedare
+这是法语combiancutlu lampedare
 
 00:02:09.066 --> 00:02:10.266
-and so let's run this
+我们运行一下
 
 00:02:12.166 --> 00:02:15.566
-and the model has identified that this is French
+这个模型已经识别出这是法国的
 
 00:02:17.800 --> 00:02:21.133
-the model can also do multiple translations at once
+该模型还可以同时进行多个翻译
 
 00:02:21.766 --> 00:02:23.133
-so in this example
+在这个例子中
 
 00:02:23.133 --> 00:02:23.666
-let's say
+假设
 
 00:02:23.666 --> 00:02:26.400
-translate the following text to French and Spanish
+将以下文本翻译成法语和西班牙语
 
 00:02:27.333 --> 00:02:30.333
-and you know what let's add another and English
+你知道吗，我们再加一个和英语
 
 00:02:31.500 --> 00:02:32.300
-pirate
+海盗
 
 00:02:34.100 --> 00:02:36.866
-and the text is I want to order a basketball
+短信是我想订一个篮球
 
 00:02:40.666 --> 00:02:42.266
-so here we have French
+这是法语
 
 00:02:42.600 --> 00:02:45.666
-Spanish and English pirates
+西班牙和英国海盗
 
 00:02:47.100 --> 00:02:48.400
-so in some languages
+在某些语言中
 
 00:02:48.400 --> 00:02:49.766
-the translation can change
+翻译可以改变
 
 00:02:49.766 --> 00:02:52.766
-depending on the speakers relationship to the listener
+取决于说话者和听者的关系
 
 00:02:52.800 --> 00:02:56.000
-and you can also explain this to the language model
+你也可以把这个解释给语言模型
 
 00:02:56.000 --> 00:02:57.200
-and so it will be able to
+所以它能够
 
 00:02:57.533 --> 00:02:59.466
-kind of translate accordingly
+相应的翻译
 
 00:02:59.766 --> 00:03:02.000
-so in this example we say
+在这个例子中我们说
 
 00:03:02.000 --> 00:03:03.700
-translate the following text to Spanish
+把下面的文字翻译成西班牙语
 
 00:03:03.700 --> 00:03:06.266
-in both the formal and informal forms
+无论是正式的还是非正式的
 
 00:03:06.266 --> 00:03:07.766
-would you like to order a pillow
+您要订个枕头吗
 
 00:03:08.066 --> 00:03:11.100
-and also notice here we're using a different delimiter
+注意这里我们用了不同的分隔符
 
 00:03:11.366 --> 00:03:13.000
-than these baptics
+而不是这些洗礼
 
 00:03:13.000 --> 00:03:14.200
-it doesn't really matter
+这并不重要
 
 00:03:14.200 --> 00:03:16.166
-as long as it's kind of a clear separation
+只要有明确的界限就行
 
 00:03:17.866 --> 00:03:21.000
-so here we have the formal and informal
+这里我们有正式的和非正式的
 
 00:03:21.800 --> 00:03:24.066
-so formal is when you're speaking to someone who's
+所以正式是当你和某人说话时
 
 00:03:24.066 --> 00:03:25.700
-maybe senior to you or you're in a
+也许比你级别高，或者你在
 
 00:03:25.700 --> 00:03:27.000
-professional situation
+专业的情况
 
 00:03:27.133 --> 00:03:28.466
-that's when you use a formal tone
+这就是你使用正式语气的时候
 
 00:03:28.466 --> 00:03:30.933
-and then informal is when you're speaking to
+非正式的是当你和某人说话的时候
 
 00:03:31.066 --> 00:03:32.600
-maybe a group of friends
+也许是一群朋友
 
 00:03:32.866 --> 00:03:34.900
-I don't actually speak Spanish but
+我不会说西班牙语，不过
 
 00:03:34.933 --> 00:03:37.100
-my dad does and he says that this is correct
+我爸爸做了，他说这是正确的
 
 00:03:38.133 --> 00:03:39.900
-so for the next example
+下一个例子
 
 00:03:40.333 --> 00:03:43.133
-we're going to pretend that we're in charge of a
+假设我们负责一个
 
 00:03:43.366 --> 00:03:45.533
-multinational e commerce company
+跨国电子商务公司
 
 00:03:45.533 --> 00:03:47.600
-and so the user messages are going to be
+用户消息将会是
 
 00:03:47.600 --> 00:03:48.933
-in all different languages
+在所有不同的语言
 
 00:03:48.933 --> 00:03:51.133
-and so users are going to be telling us about their it
+所以用户会告诉我们他们的信息
 
 00:03:51.266 --> 00:03:54.366
-issues in a wide variety of languages
+各种语言的问题
 
 00:03:54.866 --> 00:03:57.266
-so we need a universal translator
+所以我们需要一个通用翻译器
 
 00:03:57.766 --> 00:03:59.733
-so first we'll just paste in
+首先我们粘贴进去
 
 00:03:59.766 --> 00:04:01.566
-a list of user messages in
+中的用户消息列表
 
 00:04:01.566 --> 00:04:03.500
-a variety of different languages
+各种不同的语言
 
 00:04:04.766 --> 00:04:07.166
-and now we will loop through
+现在我们循环一下
 
 00:04:10.566 --> 00:04:11.566
-each of these
+每一个
 
 00:04:11.933 --> 00:04:16.300
-user messages so for issue in user messages
+用户消息因此在用户消息的问题
 
 00:04:18.000 --> 00:04:20.066
-and then I'm going to copy over
+然后我要复制过来
 
 00:04:20.166 --> 00:04:21.800
-this slightly longer code block
+这个稍长的代码块
 
 00:04:23.100 --> 00:04:26.333
-and so the first thing we'll do is ask the model to
+所以我们要做的第一件事就是让模型
 
 00:04:27.200 --> 00:04:29.566
-tell us what language the issue is in
+告诉我们问题是用什么语言写的
 
 00:04:29.666 --> 00:04:31.366
-so here's the prompt
+这是提示符
 
 00:04:31.666 --> 00:04:33.733
-then we'll print out the
+然后打印出来
 
 00:04:33.933 --> 00:04:36.866
-original messages language and the issue
+原始信息的语言和问题
 
 00:04:37.166 --> 00:04:39.800
-and then we'll ask the model to translate it into
+然后我们让模型把它转换成
 
 00:04:39.800 --> 00:04:40.866
-English and Korean
+英语和韩语
 
 00:04:42.700 --> 00:04:43.733
-so let's run this
+我们运行一下
 
 00:04:45.566 --> 00:04:47.600
-so the original message in French
+这是法语原文
 
 00:04:53.333 --> 00:04:54.866
-so we have variety of languages
+所以我们有多种语言
 
 00:04:54.866 --> 00:04:56.733
-and then the model translates
+然后模型进行翻译
 
 00:04:57.133 --> 00:04:59.133
-them into English and then Korean
+把它们翻译成英语，然后是韩语
 
 00:04:59.566 --> 00:05:01.166
-and you can kind of see here
+你可以在这里看到
 
 00:05:01.166 --> 00:05:04.266
-so the model says this is French
+模型说这是法语
 
 00:05:04.500 --> 00:05:06.566
-so that's because the
+这是因为
 
 00:05:07.066 --> 00:05:10.000
-response from this prompt is going to be this is French
+这个提示符的响应将是this is French
 
 00:05:10.066 --> 00:05:10.900
-you could try
+你可以试试
 
 00:05:11.000 --> 00:05:12.800
-editing this prompt to say something like
+编辑这个提示，让它像
 
 00:05:12.866 --> 00:05:15.733
-tell me what language this is respond with only one
+告诉我这是什么语言，只回答一个
 
 00:05:16.300 --> 00:05:18.866
-with only one word or don't use a sentence
+只用一个词或者不要用一个句子
 
 00:05:18.866 --> 00:05:19.533
-that kind of thing
+诸如此类的事情
 
 00:05:19.533 --> 00:05:21.666
-if you wanted this to just speak one word
+如果你想让我说一句话
 
 00:05:21.733 --> 00:05:22.300
-or you could
+或者你可以
 
 00:05:22.300 --> 00:05:24.566
-ask for it in a JSON format or something like that
+请求JSON格式或类似的格式
 
 00:05:24.566 --> 00:05:26.266
-which would probably encourage it to
+这可能会鼓励它这么做
 
 00:05:26.500 --> 00:05:27.900
-not use a whole sentence
+不要用整个句子
 
 00:05:29.166 --> 00:05:33.766
-and so amazing you've just built a universal translator
+你造了一个通用翻译器真是太神奇了
 
 00:05:33.866 --> 00:05:36.266
-and also feel free to pause the video
+你也可以暂停视频
 
 00:05:36.733 --> 00:05:38.200
-and add kind of any
+然后加上任何
 
 00:05:38.466 --> 00:05:40.366
-other language you want to try here
+你想试试别的语言吗
 
 00:05:40.366 --> 00:05:42.533
-maybe languages you speak yourself
+也许是你自己会说的语言
 
 00:05:42.600 --> 00:05:44.300
-and see how the model does
+看看模型是怎样的
 
 00:05:46.000 --> 00:05:47.700
-so the next thing we're going to
+接下来我们要做的是
 
 00:05:47.733 --> 00:05:50.100
-dive into is tone transformation
+深入研究他的语气变化
 
 00:05:50.366 --> 00:05:53.133
-writing can vary based on an intended audience
+写作可以根据目标读者的不同而有所不同
 
 00:05:53.133 --> 00:05:55.766
-you know the way that I would write an email to a
+你知道我给a写电子邮件的方式
 
 00:05:56.200 --> 00:05:58.333
-colleague or a professor is
+同事或教授是
 
 00:05:58.333 --> 00:05:59.066
-obviously going to be
+显然会是
 
 00:05:59.066 --> 00:06:01.466
-quite different to the way I text my younger brother
+和我给我弟弟发短信的方式完全不同
 
 00:06:01.900 --> 00:06:02.533
 and so Chuck
 
 00:06:02.533 --> 00:06:05.400
-GBT can actually also help produce different tones
+GBT实际上也可以帮助产生不同的音调
 
 00:06:06.700 --> 00:06:09.200
-so let's look at some examples
+我们来看一些例子
 
 00:06:09.466 --> 00:06:11.266
-so in this first example
+在第一个例子中
 
 00:06:11.866 --> 00:06:12.733
-the prompt is
+提示符是
 
 00:06:12.733 --> 00:06:13.333
-translate
+翻译
 
 00:06:13.333 --> 00:06:15.700
-the following from slang to a business letter
+下面从俚语转到商务信函
 
 00:06:15.900 --> 00:06:17.100
-dude this is Joe
+伙计，这是乔
 
 00:06:17.100 --> 00:06:19.400
-check out this spec on the standing lamp
+看看立灯的规格
 
 00:06:21.100 --> 00:06:21.900
-so
+所以
 
 00:06:22.366 --> 00:06:23.500
-execute this
+执行这个
 
 00:06:26.300 --> 00:06:27.166
-and as you can see
+如你所见
 
 00:06:27.166 --> 00:06:30.333
-we have a much more formal business letter
+我们的商务信函要正式得多
 
 00:06:30.766 --> 00:06:34.266
-with a proposal for a standing lamp specification
+并提出了一项立灯规范的建议
 
 00:06:35.000 --> 00:06:37.366
-the next thing that we're going to do is
+接下来我们要做的是
 
 00:06:37.533 --> 00:06:39.600
-to combert between different formats
+在不同的格式之间进行转换
 
 00:06:39.666 --> 00:06:40.300
 chart GBT
 
 00:06:40.300 --> 00:06:41.400
-is very good at translating
+擅长翻译吗
 
 00:06:41.400 --> 00:06:44.600
-between different formats such as JSON to HTML
+不同格式(如JSON到HTML)之间的转换
 
 00:06:44.600 --> 00:06:46.700
-you know XML all kinds of things
+你知道XML，所有的东西
 
 00:06:46.733 --> 00:06:47.533
-Mark down
+记下
 
 00:06:48.733 --> 00:06:49.900
-and so in the prompt
+所以在提示中
 
 00:06:49.900 --> 00:06:52.566
-we'll describe both the input and the output formats
+我们将描述输入和输出格式
 
 00:06:52.766 --> 00:06:55.700
-so here is an example
+这里有一个例子
 
 00:06:55.933 --> 00:06:57.733
-so we have this
+我们得到了这个
 
 00:06:58.066 --> 00:07:00.066
-JSON that contains
+JSON，包含
 
 00:07:00.133 --> 00:07:02.966
-a list of restaurant employees with their name
+一份餐馆员工名单，上面有他们的名字
 
 00:07:02.966 --> 00:07:03.800
-and email
+和电子邮件
 
 00:07:04.500 --> 00:07:06.400
-and then in the prompt
+然后在提示符中
 
 00:07:06.566 --> 00:07:07.466
-we're going to
+我们要
 
 00:07:07.600 --> 00:07:11.800
-ask the model to translate this from JSON to HTML
+要求模型将其从JSON转换为HTML
 
 00:07:11.900 --> 00:07:13.100
-so the prompt is
+提示符是
 
 00:07:13.133 --> 00:07:14.100
-translate the following
+翻译以下内容
 
 00:07:14.100 --> 00:07:16.200
-Python dictionary from JSON to an
+从JSON到an的Python字典
 
 00:07:16.200 --> 00:07:19.266
-HTML table with column headers and titles
+带有列头和标题的HTML表
 
 00:07:21.700 --> 00:07:22.500
-and
+和
 
 00:07:23.133 --> 00:07:23.966
-then will
+然后将
 
 00:07:24.733 --> 00:07:26.200
-get the response
+获取响应
 
 00:07:26.700 --> 00:07:28.733
-from the model and print it
+从模型中打印出来
 
 00:07:30.000 --> 00:07:31.733
-so here we have some
+这里有一些
 
 00:07:32.400 --> 00:07:37.300
-HTML displaying all of the employee names and emails
+显示所有员工姓名和电子邮件的HTML
 
 00:07:38.566 --> 00:07:42.933
-and so now let's see if we can actually view this HTML
+现在让我们看看能否查看这个HTML
 
 00:07:43.466 --> 00:07:44.266
-so
+所以
 
 00:07:44.866 --> 00:07:46.733
-we're going to use this display function
+我们将使用这个显示函数
 
 00:07:46.733 --> 00:07:50.533
-from this Python library display HTML
+从这个Python库显示HTML
 
 00:07:50.866 --> 00:07:52.100
-response
+响应
 
 00:07:54.600 --> 00:07:58.200
-and here you can see that this is a properly formatted
+这里你可以看到这是一个正确的格式
 
 00:07:58.500 --> 00:07:59.366
-HTML table
+HTML表
 
 00:08:01.333 --> 00:08:04.300
-the next transformation task we're going to do
+我们要做的下一个变换任务
 
 00:08:04.466 --> 00:08:06.966
-is spell check and grammar checking
+拼写检查和语法检查
 
 00:08:07.000 --> 00:08:10.666
-and this is a really kind of popular use for ChatGPT
+这是ChatGPT的一种非常流行的用法
 
 00:08:10.666 --> 00:08:13.800
-I highly recommend doing this I do this all the time
+我强烈建议你这么做，我一直都这么做
 
 00:08:14.100 --> 00:08:14.400
-and this is
+这是
 
 00:08:14.400 --> 00:08:16.133
-especially useful when you're working in a non
+当你在非营利性组织工作时尤其有用
 
 00:08:16.133 --> 00:08:17.200
-native language
+母语
 
 00:08:17.200 --> 00:08:19.100
-and so here are some examples
+这里有一些例子
 
 00:08:19.133 --> 00:08:22.500
-of some common grammar and spelling problems and how
+一些常见的语法和拼写问题和如何
 
 00:08:22.600 --> 00:08:24.866
-the language model can help address these
+语言模型可以帮助解决这些问题
 
 00:08:25.600 --> 00:08:27.300
-so I'm going to paste in
+我要粘贴进去
 
 00:08:27.400 --> 00:08:29.166
-a list of
+以下是
 
 00:08:29.300 --> 00:08:32.866
-sentences that have some grammatical or spelling errors
+有语法或拼写错误的句子
 
 00:08:33.400 --> 00:08:35.133
-and then we're going to
+然后我们要
 
 00:08:35.500 --> 00:08:38.333
-loop through each of these sentences
+循环遍历这些句子
 
 00:08:41.800 --> 00:08:42.666
-and
+和
 
 00:08:45.300 --> 00:08:47.066
-ask the model to proofread these
+请模特校对一下
 
 00:08:49.300 --> 00:08:51.566
-proofread and correct
+校对和更正
 
 00:08:52.000 --> 00:08:54.966
-and then we'll use some dlimeters
+然后我们用一些分尺
 
 00:09:04.400 --> 00:09:08.333
-and then we will get the response and print it as usual
+然后我们将得到响应并像往常一样打印它
 
 00:09:27.966 --> 00:09:31.066
-and so the model is able to correct
+这样模型就可以进行修正
 
 00:09:31.400 --> 00:09:34.133
-all of these grammatical errors
+所有这些语法错误
 
 00:09:34.200 --> 00:09:34.766
-we could use
+我们可以用
 
 00:09:34.766 --> 00:09:36.800
-some of the techniques that we've discussed before
+我们之前讨论过的一些技术
 
 00:09:36.933 --> 00:09:37.733
-so
+所以
 
 00:09:38.266 --> 00:09:39.733
-we could to improve the prompt
+我们可以改进提示
 
 00:09:39.733 --> 00:09:41.333
-we could say pre read and correct
+我们可以说预读和更正
 
 00:09:41.533 --> 00:09:42.900
-the following text
+下面的文字
 
 00:09:46.133 --> 00:09:47.766
-and rewrite oh
+重写哦
 
 00:09:56.466 --> 00:09:58.333
-and rewrite the whole
+重写整个
 
 00:10:02.366 --> 00:10:03.600
-and rewrite it
+重写一下
 
 00:10:04.900 --> 00:10:05.933
-corrected
+纠正
 
 00:10:08.966 --> 00:10:10.300
-version if you
+版本如果你
 
 00:10:10.733 --> 00:10:11.666
-don't find
+找不到
 
 00:10:12.800 --> 00:10:14.100
-any errors
+任何错误
 
 00:10:14.900 --> 00:10:15.800
-just say
+只是说
 
 00:10:16.966 --> 00:10:18.466
-no errors found
+没有发现错误
 
 00:10:21.266 --> 00:10:22.333
-let's try this
+我们来试试这个
 
 00:10:26.566 --> 00:10:28.133
-so this way we were able to
+这样我们就可以
 
 00:10:28.133 --> 00:10:30.466
-oh they're still using quotes here
+哦，这里还是用引号
 
 00:10:31.266 --> 00:10:33.266
-but you can imagine you'd be able to find
+但你可以想象你能找到
 
 00:10:33.300 --> 00:10:35.500
-a way with a little bit of
+一种有一点
 
 00:10:35.900 --> 00:10:37.600
-iterative prompt development
+迭代式提示开发
 
 00:10:37.733 --> 00:10:38.066
-to
+来
 
 00:10:38.066 --> 00:10:40.266
-kind of find a prompt that works more reliably every
+找到一个更可靠的提示符
 
 00:10:40.266 --> 00:10:41.066
-single time
+一次
 
 00:10:42.066 --> 00:10:43.900
-and so now we'll do another example
+现在我们再做一个例子
 
 00:10:43.933 --> 00:10:46.266
-it's always useful to check your tax before
+事先查一下你的税单总是有用的
 
 00:10:46.266 --> 00:10:48.266
-you post it in a public forum
+你把它发布在公共论坛上
 
 00:10:48.266 --> 00:10:51.066
-and so we'll go through an example of checking a review
+我们来看一个检查评论的例子
 
 00:10:51.733 --> 00:10:54.133
-and so here is a review about a stuffed panda
+这是一篇关于熊猫毛绒玩具的评论
 
 00:10:54.266 --> 00:10:55.200
-and so we're going to
+所以我们要
 
 00:10:55.200 --> 00:10:58.066
-ask the model to proofread and correct the review
+请模特校对并更正评论
 
 00:11:01.200 --> 00:11:03.200
-great so we have this corrected version
+很好，我们有了这个修正版本
 
 00:11:03.466 --> 00:11:06.133
-and one cool thing we can do is
+我们能做的一件很酷的事是
 
 00:11:06.133 --> 00:11:08.333
-find the kind of differences between our
+找出我们之间的区别
 
 00:11:08.333 --> 00:11:10.766
-original review and the model's output
+原始评审和模型的输出
 
 00:11:11.066 --> 00:11:12.566
-so we're going to use this
+所以我们要用这个
 
 00:11:12.966 --> 00:11:15.100
-red lines Python package to do this
+红线Python包来做这个
 
 00:11:15.100 --> 00:11:19.300
-and to we're going to get the diff between the original
+我们将得到原始的差值
 
 00:11:20.266 --> 00:11:23.200
-text of our review and the model output
+我们的审查文本和模型输出
 
 00:11:23.266 --> 00:11:25.133
-and then display this
+然后显示这个
 
 00:11:27.466 --> 00:11:29.866
-and so here you can see the diff between
+所以这里你可以看到两者的区别
 
 00:11:30.066 --> 00:11:33.400
-the original review and the model output
+原始评审和模型输出
 
 00:11:33.400 --> 00:11:35.366
-and the kind of things that have been corrected
+以及那些已经被纠正的事情
 
 00:11:35.733 --> 00:11:38.133
-so the prompts that we use was
+所以我们使用的提示是
 
 00:11:38.500 --> 00:11:40.133
-proofread and correct this review
+校对并修改这篇评论
 
 00:11:40.133 --> 00:11:43.666
-but you can also make kind of more dramatic changes
+但你也可以做出更大的改变
 
 00:11:43.666 --> 00:11:44.933
-changes to tone
+音调变化
 
 00:11:44.966 --> 00:11:45.933
-that kind of thing
+诸如此类的事情
 
 00:11:46.066 --> 00:11:48.100
-so let's try
+我们来试试
 
 00:11:49.133 --> 00:11:50.400
-one more thing
+还有一件事
 
 00:11:50.666 --> 00:11:51.900
-so in this prompt
+在这个提示中
 
 00:11:52.100 --> 00:11:52.866
-we're going to
+我们要
 
 00:11:52.866 --> 00:11:54.800
-ask the model to proofread and correct
+请模特校对和更正
 
 00:11:54.800 --> 00:11:55.866
-this same review
+同样的回顾
 
 00:11:56.366 --> 00:11:58.100
-but also make it more compelling
+但也让它更引人注目
 
 00:11:58.100 --> 00:12:00.533
-and ensure that it follows APA style and
+并确保它遵循APA格式
 
 00:12:00.533 --> 00:12:02.066
-targets an advanced reader
+针对高级读者
 
 00:12:02.066 --> 00:12:03.800
-and we're also going to ask for the output
+我们也会要求输出
 
 00:12:03.800 --> 00:12:05.066
-and markdown format
+和降价格式
 
 00:12:05.066 --> 00:12:06.200
-and so we're using the same
+所以我们用的是一样的
 
 00:12:06.200 --> 00:12:07.866
-text from the original review
+来自原始评论的文本
 
 00:12:07.866 --> 00:12:08.666
-up here
+在这里
 
 00:12:09.100 --> 00:12:10.500
-so let's execute this
+我们来执行这个
 
 00:12:13.466 --> 00:12:14.966
-and here we have a
+这里是a
 
 00:12:15.366 --> 00:12:19.800
-expanded APA style review of the Soft Panda
+扩大APA风格的软熊猫检讨
 
 00:12:20.600 --> 00:12:22.466
-so this is it for the transforming video
+这就是变换视频的内容
 
 00:12:22.600 --> 00:12:25.066
-next up we have expanding where we'll take
+接下来我们要扩展我们要去的地方
 
 00:12:25.100 --> 00:12:27.766
-a shorter prompt and kind of generate a longer
+一个较短的提示符会产生一个较长的提示符
 
 00:12:28.000 --> 00:12:31.300
-more free form response from a language model
+来自语言模型的更自由的形式响应
 

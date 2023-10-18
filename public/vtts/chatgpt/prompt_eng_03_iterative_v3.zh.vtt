@@ -241,755 +241,755 @@ WEBVTT
 让我们一起看一个代码中的例子
 
 00:02:49.133 --> 00:02:49.866
-I have here
+这里有
 
 00:02:49.866 --> 00:02:52.500
-the starter code that you saw in the previous videos
+你在之前的视频中看到的起始代码
 
 00:02:52.500 --> 00:02:54.400
-have import Openai importos
+有进口Openai进口吗
 
 00:02:54.800 --> 00:02:58.266
-here we get the Openai API key
+这里我们得到Openai API密钥
 
 00:02:58.333 --> 00:03:00.733
-and this is the same helper function that you saw
+这和你们看到的辅助函数是一样的
 
 00:03:00.733 --> 00:03:01.933
-as last time
+和上次一样
 
 00:03:02.700 --> 00:03:03.500
-and
+和
 
 00:03:04.400 --> 00:03:08.366
-I'm going to use as the running example in this video
+我将在这个视频中使用它作为运行的例子
 
 00:03:08.600 --> 00:03:12.466
-the toss of summarizing a fact sheet for a chair
+为椅子总结一份情况说明书的折腾
 
 00:03:13.166 --> 00:03:15.966
-so let me just paste that in here
+我把它粘贴在这里
 
 00:03:16.733 --> 00:03:19.300
-and feel free to pause the video and
+可以暂停视频，然后
 
 00:03:19.466 --> 00:03:22.333
-read this more carefully in the notebook on the left
+请仔细阅读左边笔记本上的内容
 
 00:03:22.333 --> 00:03:25.133
-if you want but here's a factory for a chair
+如果你想，这里有个椅子工厂
 
 00:03:25.166 --> 00:03:26.166
-with a description
+有一个描述
 
 00:03:26.166 --> 00:03:28.166
-saying it's part of a beautiful family of MT
+说它是MT美丽大家庭的一部分
 
 00:03:28.266 --> 00:03:30.133
-century inspired and so on
+世纪启发等等
 
 00:03:30.666 --> 00:03:31.933
-talks about the construction
+谈论结构
 
 00:03:32.100 --> 00:03:33.466
-has the dimensions
+有尺寸
 
 00:03:33.566 --> 00:03:36.766
-options for the chair materials and so on
+可选择椅子的材质等
 
 00:03:36.966 --> 00:03:37.900
-comes from Italy
+来自意大利
 
 00:03:38.900 --> 00:03:42.166
-so let's say you want to take this fat sheet
+假设你想要这张厚纸
 
 00:03:42.200 --> 00:03:45.100
-and help a marketing team write the description
+并帮助营销团队撰写产品描述
 
 00:03:45.133 --> 00:03:47.500
-for a online retail website
+一个在线零售网站
 
 00:03:48.533 --> 00:03:49.500
-let me just quickly
+让我快速地讲一下
 
 00:03:49.866 --> 00:03:53.800
-run these three and then we'll come up with a prompt
+运行这三个，然后我们将出现一个提示
 
 00:03:56.600 --> 00:03:58.500
-as follows and it just
+如下，它只是
 
 00:03:59.333 --> 00:04:01.000
-and it just paces in
+然后它就进来了
 
 00:04:02.166 --> 00:04:05.533
-so my promptpss your task is to help a marketing team
+所以我的提示是你的任务是帮助一个营销团队
 
 00:04:05.666 --> 00:04:05.933
-create
+创建
 
 00:04:05.933 --> 00:04:07.766
-a description for a retail website of the product
+该产品零售网站的描述
 
 00:04:07.766 --> 00:04:09.000
-based on techno fact sheet
+基于技术情况说明书
 
 00:04:09.166 --> 00:04:11.166
-write the project description and so on
+写项目描述等等
 
 00:04:11.166 --> 00:04:13.666
-right so this is my first attempt to
+这是我第一次尝试
 
 00:04:13.933 --> 00:04:16.900
-explain the task to the large language model
+向大型语言模型解释任务
 
 00:04:17.200 --> 00:04:18.933
-so let me hit shift enter
+我按shift回车
 
 00:04:19.400 --> 00:04:21.333
-and this takes a few seconds to run
+这需要几秒钟来运行
 
 00:04:23.366 --> 00:04:25.100
-and we get this result
+我们得到了这个结果
 
 00:04:25.266 --> 00:04:27.700
-it looks like it's done a nice job
+看起来它做得不错
 
 00:04:27.866 --> 00:04:29.200
-writing a description
+写描述
 
 00:04:29.200 --> 00:04:30.566
-introducing a stunning Miss Entry
+有请惊艳的入场小姐
 
 00:04:30.566 --> 00:04:31.700
-Inspire Office Chair
+灵感办公椅
 
 00:04:31.700 --> 00:04:33.566
-Perfect Edition and so on
+完美版等等
 
 00:04:33.866 --> 00:04:36.666
-but when we look at this I go boy this is really long
+但是当我们看到这个的时候，我觉得这真的很长
 
 00:04:36.666 --> 00:04:39.666
-it's done a nice job doing exactly what I asked it to
+它完全按照我的要求做得很好
 
 00:04:39.866 --> 00:04:41.966
-which is start from the technical fact sheet
+哪个是从技术说明书开始的
 
 00:04:42.100 --> 00:04:44.300
-and write a private description
+并写一个私人描述
 
 00:04:45.266 --> 00:04:46.700
-but when I look at as I go
+但当我看我走
 
 00:04:46.966 --> 00:04:48.000
-this is kind of long
+这有点长
 
 00:04:48.000 --> 00:04:50.300
-maybe we wanted to be a little bit shorter
+也许我们想要短一点
 
 00:04:50.666 --> 00:04:52.933
-so I have had an idea
+所以我有了一个主意
 
 00:04:52.966 --> 00:04:54.766
-I wrote a prompt got a result
+我写了一个提示得到了一个结果
 
 00:04:54.766 --> 00:04:56.866
-I'm not that happier of it because it's too long
+我不太高兴，因为它太长了
 
 00:04:57.100 --> 00:05:01.333
-so I will then clarify my prompt
+所以我将澄清我的提示
 
 00:05:03.133 --> 00:05:04.066
-and say
+然后说
 
 00:05:05.666 --> 00:05:06.466
-use
+使用
 
 00:05:07.266 --> 00:05:09.133
-utmost 50 words
+50字以内
 
 00:05:09.500 --> 00:05:11.333
-to try to give better guidance on
+试图给出更好的指导
 
 00:05:11.333 --> 00:05:12.733
-the desired length of this
+期望的长度
 
 00:05:12.733 --> 00:05:14.266
-and this run of the game
+这一轮的比赛
 
 00:05:20.333 --> 00:05:22.366
-okay this actually looks like a
+这看起来像a
 
 00:05:22.366 --> 00:05:25.333
-much nicer short description of the product
+对产品的简短描述要好得多
 
 00:05:25.333 --> 00:05:27.366
-introducing on mid century inspired office chair
+介绍一款受世纪中期启发的办公椅
 
 00:05:27.566 --> 00:05:29.566
-and so on 5 were you just
+等等，5是你刚刚
 
 00:05:29.966 --> 00:05:32.733
-both stylish and practical not bad
+既时尚又实用
 
 00:05:34.066 --> 00:05:37.500
-and let me double check the length that this is
+我再检查一下它的长度
 
 00:05:37.500 --> 00:05:39.100
-so I'm going to take the response
+所以我要取这个响应
 
 00:05:39.166 --> 00:05:41.700
-split it going to where the spaces and then
+把它分割到空格，然后
 
 00:05:41.800 --> 00:05:42.866
-you print out the length
+你打印出长度
 
 00:05:42.866 --> 00:05:45.166
-so it's 52 words actually not bad
+所以52个单词其实还不错
 
 00:05:46.100 --> 00:05:48.700
-large language models are okay
+大型语言模型是可以的
 
 00:05:48.700 --> 00:05:50.133
-but not that great
+但也没那么好
 
 00:05:50.133 --> 00:05:53.366
-at following instructions about a very precise workout
+按照指示进行精确的锻炼
 
 00:05:53.366 --> 00:05:54.566
-but this is actually not bad
+但这其实并不坏
 
 00:05:54.566 --> 00:05:56.700
-sometimes it will print out something with
+有时它会打印一些东西
 
 00:05:56.966 --> 00:05:59.900
-60 or 65 and so on words but it's kind of
+60或65之类的词，但它有点
 
 00:06:00.133 --> 00:06:01.066
 within reason
 
 00:06:01.766 --> 00:06:04.333
-some of the things you could try to do would be
+你可以尝试做的一些事情是
 
 00:06:04.800 --> 00:06:06.766
-to say use at most the
+说最多使用
 
 00:06:07.300 --> 00:06:08.700
-three sentences
+三句话
 
 00:06:14.200 --> 00:06:16.133
-let me run that again
+我再运行一遍
 
 00:06:16.666 --> 00:06:18.933
-but these are different ways to tell the large
+但这些是不同的方式来告诉大
 
 00:06:18.933 --> 00:06:19.933
-language model
+语言模型
 
 00:06:19.966 --> 00:06:21.933
-what's the length of the upput that you want
+你想要的输出长度是多少
 
 00:06:21.933 --> 00:06:24.400
-so this is one 2
+这是1个2
 
 00:06:24.733 --> 00:06:28.300
-3 I count three sentences it also did a pretty good job
+我数了三个句子，它也做得很好
 
 00:06:28.666 --> 00:06:32.366
-and then I've also seen people sometimes do things like
+我还看到人们有时会做这样的事情
 
 00:06:32.800 --> 00:06:35.766
-I don't know use that most 280 characters
+我不知道，最多用280个字符
 
 00:06:36.333 --> 00:06:38.333
-large language models because of
+大型语言模型是因为
 
 00:06:38.400 --> 00:06:40.100
-the way they interpret text
+他们解读文本的方式
 
 00:06:40.100 --> 00:06:41.733
-using something called a tokenizer
+使用一种叫做标记器的东西
 
 00:06:41.733 --> 00:06:43.266
-which which I won't talk about
+这个我就不说了
 
 00:06:43.466 --> 00:06:48.266
-but they tend to be so so accounting characters but
+但他们往往是会计角色，但是
 
 00:06:49.200 --> 00:06:52.366
-let's see 281 characters is actually surprising
+让我们看看281个字符实际上是令人惊讶的
 
 00:06:52.366 --> 00:06:53.366
-any close usually a
+任何接近的，通常是
 
 00:06:53.533 --> 00:06:56.333
-large language model doesn't get it quite as close
+大型语言模型没有这么接近
 
 00:06:56.333 --> 00:06:57.666
-but these are different ways
+但这是不同的方式
 
 00:06:57.700 --> 00:06:59.066
-they can play with to try to
+他们可以试着玩
 
 00:06:59.066 --> 00:07:00.666
-control the length of the output
+控制输出的长度
 
 00:07:00.700 --> 00:07:02.166
-that you get but then just
+你得到的，但是
 
 00:07:02.700 --> 00:07:05.766
-switch about to use at most 50 words
+切换到最多使用50个单词
 
 00:07:09.066 --> 00:07:11.366
-and that's our result that we had just now
+这就是我们刚刚得到的结果
 
 00:07:12.733 --> 00:07:15.766
-as we continue to refine this text for our websites
+随着我们继续为我们的网站完善这篇文章
 
 00:07:15.766 --> 00:07:18.100
-we might decide that
+我们可能会决定
 
 00:07:18.466 --> 00:07:20.800
-this website isn't selling
+这个网站卖不出去
 
 00:07:20.866 --> 00:07:23.366
-director consumers is actually intended
+导演消费者实际上是有意的
 
 00:07:23.500 --> 00:07:26.800
-to sell furniture to furniture retailers
+向家具零售商出售家具
 
 00:07:27.000 --> 00:07:29.400
-that would be more interested in the technical
+他们会对技术更感兴趣
 
 00:07:29.400 --> 00:07:30.666
-details of the chair
+椅子的细节
 
 00:07:30.666 --> 00:07:32.466
-and the materials of the chair
+还有椅子的材料
 
 00:07:32.733 --> 00:07:34.933
-in that case you can take this prompt and say
+在这种情况下，你可以接受这个提示并说
 
 00:07:35.400 --> 00:07:37.400
-I want to modify this prompt
+我想修改这个提示符
 
 00:07:37.666 --> 00:07:39.700
-to get it to be more precise
+让它更精确
 
 00:07:39.700 --> 00:07:41.766
-about the technical details
+关于技术细节
 
 00:07:42.300 --> 00:07:45.600
-so let me keep on modifying this prompt
+我继续修改这个提示符
 
 00:07:46.900 --> 00:07:47.933
-and I'm going to say
+我要说的是
 
 00:07:48.800 --> 00:07:50.966
-this description is intended for furniture retailers
+本描述适用于家具零售商
 
 00:07:50.966 --> 00:07:52.933
-so should be technical and focus on materials
+所以应该注重技术和材料
 
 00:07:52.933 --> 00:07:54.466
-products and construct it from
+产品和构造
 
 00:07:55.500 --> 00:07:56.766
-well let's run that
+我们运行一下
 
 00:07:58.533 --> 00:08:00.100
-and let's see
+我们来看看
 
 00:08:01.533 --> 00:08:02.133
-not bad
+不坏
 
 00:08:02.133 --> 00:08:05.666
-says you know cult aluminum base and pneumatic care
+说你知道邪教铝制底座和气动护理
 
 00:08:06.766 --> 00:08:08.200
-high quality materials
+优质材料
 
 00:08:08.200 --> 00:08:11.266
-so by changing the prompt you can get it to
+因此，通过更改提示符，您可以将其设置为
 
 00:08:11.400 --> 00:08:14.400
-focus more on specific characters
+更多地关注特定的角色
 
 00:08:14.400 --> 00:08:17.000
-on specific characteristics you want it to
+在你想要的特定特征上
 
 00:08:17.500 --> 00:08:18.300
-and
+和
 
 00:08:18.966 --> 00:08:20.800
-when I look at this I might decide
+当我看到这个的时候，我可能会决定
 
 00:08:21.566 --> 00:08:23.100
-at the end of the description
+在描述的最后
 
 00:08:23.466 --> 00:08:26.666
-I also wanted to include
+我还想包括
 
 00:08:27.300 --> 00:08:28.400
-the product IDS
+产品IDS
 
 00:08:28.400 --> 00:08:31.400
-so the two offerings of this share SWC110
+这两支股票SWC110
 
 00:08:31.933 --> 00:08:33.100
 Soc 100
 
 00:08:33.733 --> 00:08:34.533
-so
+所以
 
 00:08:35.133 --> 00:08:38.766
-maybe I can further improve this prompt
+也许我可以进一步改进这个提示
 
 00:08:39.966 --> 00:08:42.000
-and to get it to give me the product IDS
+并让它给我产品id
 
 00:08:42.000 --> 00:08:42.900
-I can add this
+我可以加上这个
 
 00:08:42.900 --> 00:08:44.766
-instruction at the end of the description
+说明的最后
 
 00:08:44.766 --> 00:08:45.566
-include every
+包括每一个
 
 00:08:45.700 --> 00:08:48.200
-7 character product ID in the technical specification
+技术规范中的7个字符的产品ID
 
 00:08:48.533 --> 00:08:49.333
-and
+和
 
 00:08:49.900 --> 00:08:50.900
-let's run it
+让我们运行一下
 
 00:08:51.666 --> 00:08:53.200
-and see what happens
+看看会发生什么
 
 00:08:53.933 --> 00:08:56.866
-and so this is introduced to our missections file
+这就是我们的missections文件
 
 00:08:56.866 --> 00:08:57.733
-office share
+办公室分享
 
 00:08:58.266 --> 00:09:02.600
-shell colours tossel plastic coating aluminum base
+外壳颜色抛掷塑料涂层铝基
 
 00:09:02.800 --> 00:09:05.200
-practical some options
+实用的一些选项
 
 00:09:06.300 --> 00:09:08.366
-talk about the two product IDS
+谈谈这两种产品IDS
 
 00:09:08.366 --> 00:09:09.933
-so this looks pretty good
+这看起来很不错
 
 00:09:10.333 --> 00:09:12.466
-and what you've just seen is a
+你刚刚看到的是a
 
 00:09:12.800 --> 00:09:16.133
-short example of the iterative prompt development
+迭代提示开发的简短示例
 
 00:09:16.266 --> 00:09:18.600
-that many developers will go through
+这是许多开发者都会经历的
 
 00:09:19.200 --> 00:09:22.133
-and I think our guidelines is
+我认为我们的指导方针是
 
 00:09:22.366 --> 00:09:23.566
-in the last video
+在上个视频中
 
 00:09:23.566 --> 00:09:26.800
-you saw user share a number of best practices
+您看到用户分享了许多最佳实践
 
 00:09:26.800 --> 00:09:28.700
-and so what I usually do is
+所以我通常做的是
 
 00:09:28.733 --> 00:09:30.800
-keep best practices like that in mind
+记住这样的最佳实践
 
 00:09:30.933 --> 00:09:32.100
-be clear and specific
+要清晰具体
 
 00:09:32.100 --> 00:09:35.166
-and if necessary give the model time to think
+如果有必要，给模型时间思考
 
 00:09:35.500 --> 00:09:38.200
-with those in mind is worthwhiles often
+经常记住这些是值得的
 
 00:09:38.500 --> 00:09:40.300
-take a first attempt at writing a prompt
+第一次尝试写提示
 
 00:09:40.300 --> 00:09:41.933
-see what happens and then
+看看会发生什么
 
 00:09:42.000 --> 00:09:44.766
-go from there to iteratively refine the prompt
+从那里开始迭代地改进提示符
 
 00:09:44.766 --> 00:09:46.166
-to get closer and closer
+越来越近
 
 00:09:46.400 --> 00:09:48.366
-to the result that you need
+得到你想要的结果
 
 00:09:49.733 --> 00:09:52.866
-and so a lot of the successful prompts that you may see
+所以你可能会看到很多成功的提示
 
 00:09:52.900 --> 00:09:54.733
-using various programs was
+使用各种程序
 
 00:09:54.900 --> 00:09:57.200
-arrive at an iterative process
+到达一个迭代过程
 
 00:09:57.400 --> 00:09:58.200
-like this
+像这样
 
 00:09:58.933 --> 00:10:01.600
-just for fun let me show you an example of
+为了好玩，我给你们举个例子
 
 00:10:01.733 --> 00:10:03.133
-an even more complex
+更复杂的是
 
 00:10:03.133 --> 00:10:06.733
-prompt that might give you a sense of what Chat GPT
+提示符，可以让您了解什么是Chat GPT
 
 00:10:07.133 --> 00:10:09.966
-can do which is I've just added a few
+能做的就是我刚刚加了几个
 
 00:10:10.200 --> 00:10:11.500
-extra instructions here
+这里有额外的说明
 
 00:10:11.766 --> 00:10:12.600
-after the description
+在描述之后
 
 00:10:12.600 --> 00:10:15.100
-include the table that use the product dimensions
+包括使用产品尺寸的表
 
 00:10:15.100 --> 00:10:17.500
-and then you'll format everything as HTML
+然后将所有内容格式化为HTML
 
 00:10:17.500 --> 00:10:18.766
-so let's run that
+我们运行一下
 
 00:10:21.166 --> 00:10:22.200
-and in practice
+在实践中
 
 00:10:22.300 --> 00:10:24.800
-you would end up with a prompt like this
+你会得到这样的提示
 
 00:10:24.933 --> 00:10:27.066
-really only after multiple iterations
+实际上只有在多次迭代之后
 
 00:10:27.066 --> 00:10:28.366
-I don't think I know anyone
+我想我谁也不认识
 
 00:10:28.666 --> 00:10:31.566
-that would write this exact prompt the first time
+第一次写的就是这个提示符
 
 00:10:31.700 --> 00:10:32.666
-they were trying to
+他们试图
 
 00:10:32.900 --> 00:10:35.100
-get the system to process a fact sheet
+让系统处理一份情况说明书
 
 00:10:35.866 --> 00:10:39.933
-and so this actually outputs a bunch of HDML
+这实际上输出了一堆HDML
 
 00:10:40.500 --> 00:10:42.966
-let's display the HDML
+让我们显示HDML
 
 00:10:43.266 --> 00:10:45.166
-to see if this is even valid
+看看这是否有效
 
 00:10:45.200 --> 00:10:46.966
-HDML and see if this works
+看看这是否有效
 
 00:10:47.333 --> 00:10:49.133
-and I don't actually know what's going to work
+我也不知道怎样才能成功
 
 00:10:49.133 --> 00:10:49.766
-but let's see
+但是让我们看看
 
 00:10:49.766 --> 00:10:51.766
-oh cool alright looks like I rend it
+哦，很酷，好吧，看起来我喜欢它
 
 00:10:52.400 --> 00:10:53.866
-so it has this really nice
+它有这个很漂亮
 
 00:10:53.866 --> 00:10:55.566
-looking description of a chair
+看起来像一把椅子
 
 00:10:56.700 --> 00:10:59.266
-construction materials
+建筑材料
 
 00:10:59.466 --> 00:11:00.900
-product dimensions
+产品尺寸
 
 00:11:03.333 --> 00:11:05.933
-oh it looks like I left out the user
+哦，我好像漏掉了用户
 
 00:11:05.933 --> 00:11:07.300
-most 50 words instructions
+最多50个字的说明
 
 00:11:07.300 --> 00:11:09.266
-so this is a little bit long but if you want that
+这个有点长，但是如果你想要的话
 
 00:11:09.266 --> 00:11:12.066
-you can even feel free to pause the video
+你甚至可以随意暂停视频
 
 00:11:12.066 --> 00:11:14.166
-tell it to be more succinct and
+让它更简洁
 
 00:11:14.166 --> 00:11:16.733
-regenerate this and see what results you get
+重新生成它，看看得到什么结果
 
 00:11:17.866 --> 00:11:19.900
-so I hope you take away from this video
+所以我希望你们能从这个视频中受益
 
 00:11:19.900 --> 00:11:22.766
-that prompt development is an iterative process
+快速开发是一个迭代过程
 
 00:11:22.766 --> 00:11:23.566
-try something
+尝试一些
 
 00:11:23.766 --> 00:11:27.133
-see how it does not yet fulfill exactly what you want
+看看它怎么还没有完全满足你想要的
 
 00:11:27.400 --> 00:11:28.800
-and then think about how to
+然后想想怎么
 
 00:11:28.800 --> 00:11:31.600
-clarify your instructions or in some cases
+澄清你的指示，或者在某些情况下
 
 00:11:31.666 --> 00:11:33.933
-think about how to give it more space to think
+想想如何给它更多的思考空间
 
 00:11:34.200 --> 00:11:35.466
-to get it closer
+让它更靠近
 
 00:11:35.500 --> 00:11:37.533
-to delivering the results that you want
+实现你想要的结果
 
 00:11:38.866 --> 00:11:41.100
-and I think the key to being an
+我认为成为一个
 
 00:11:41.100 --> 00:11:42.866
-effective prompt engineer
+有效速递工程师
 
 00:11:43.100 --> 00:11:46.533
-isn't so much about knowing the perfect prompt
+关键不在于知道正确的提示
 
 00:11:46.666 --> 00:11:49.733
-is about having a good process to develop prompts
+是关于有一个好的过程来开发提示吗
 
 00:11:49.733 --> 00:11:50.866
-that are effective
+是有效的
 
 00:11:50.900 --> 00:11:52.366
-for your application
+对于你的申请
 
 00:11:52.933 --> 00:11:54.900
-and in this video I illustrated
+在这个视频中我已经说明了
 
 00:11:55.300 --> 00:11:58.166
-developing a prompt using just one example
+仅使用一个示例开发提示符
 
 00:11:58.666 --> 00:12:01.133
-for more sophisticated applications
+对于更复杂的应用程序
 
 00:12:01.166 --> 00:12:02.700
-sometimes you will have
+有时你会有
 
 00:12:03.366 --> 00:12:07.300
-multiple examples say a list of 10 or even
+很多例子都是10个甚至更多
 
 00:12:07.466 --> 00:12:09.400
-50 or 100 fat sheets
+50或100张胖纸
 
 00:12:09.533 --> 00:12:13.200
-and iteratively develop a prompt and evaluated
+并迭代开发一个提示和评估
 
 00:12:13.533 --> 00:12:16.500
-against a large set of cases
+针对一大堆案件
 
 00:12:18.300 --> 00:12:21.333
-but for the early development of most applications
+但对于大多数应用程序的早期开发
 
 00:12:21.466 --> 00:12:23.533
-I see many people developing it
+我看到很多人都在开发它
 
 00:12:23.533 --> 00:12:26.500
-sort of the way I am with just one example
+就像我举了一个例子一样
 
 00:12:26.766 --> 00:12:29.566
-but then for more mature applications sometimes
+但是对于更成熟的应用程序来说
 
 00:12:29.866 --> 00:12:31.200
-it could be useful
+这可能很有用
 
 00:12:31.566 --> 00:12:35.266
-to evaluate prompt against a larger set of examples
+根据一组更大的例子来评估提示
 
 00:12:35.266 --> 00:12:36.066
-such as
+如
 
 00:12:36.700 --> 00:12:38.500
-to test different Proms on
+来测试不同的舞会
 
 00:12:38.733 --> 00:12:39.966
-dozens of fact sheets
+数十份情况说明书
 
 00:12:39.966 --> 00:12:42.766
-to see how is average or worst case performances
+看看他的平均表现和最差表现
 
 00:12:42.766 --> 00:12:44.266
-on multiple fact sheets
+在多个情况说明书上
 
 00:12:44.266 --> 00:12:46.800
-but usually you end up doing that
+但通常你最后都会这么做
 
 00:12:46.900 --> 00:12:48.800
-only when an application is more mature
+只有当应用程序更成熟时
 
 00:12:48.800 --> 00:12:50.300
-and you have to have those metrics
+你必须有这些指标
 
 00:12:50.300 --> 00:12:51.700
-to drive that incremental
+来推动增量
 
 00:12:51.700 --> 00:12:54.133
-last few steps of prompt improvement
+最后几个步骤的及时改进
 
 00:12:55.166 --> 00:12:56.000
-so with that
+就讲到这里
 
 00:12:56.266 --> 00:12:59.266
-please do play with the Jupiter code notebook
+请使用木星代码笔记本
 
 00:12:59.266 --> 00:13:01.866
-examples and try out different variations and
+并尝试不同的变化和
 
 00:13:01.900 --> 00:13:03.200
-see what results you get
+看看你会得到什么结果
 
 00:13:03.566 --> 00:13:04.500
-and when you're done
+当你完成后
 
 00:13:04.700 --> 00:13:06.333
-let's go on to the next video
+我们继续下个视频
 
 00:13:06.533 --> 00:13:09.400
-where we'll talk about one very common
+我们将讨论一个非常常见的
 
 00:13:09.500 --> 00:13:13.400
-use of large language models in software applications
+在软件应用程序中使用大型语言模型
 
 00:13:13.466 --> 00:13:15.533
-which is to summarise text
+哪一个是总结文本
 
 00:13:15.600 --> 00:13:18.133
-so when you're ready let's go on to the next video
+当你准备好了，我们继续下一个视频
 
